@@ -63,7 +63,7 @@ export default function Home() {
   const nextRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
   return (
-    <main className="w-full bg-white text-blue-900">
+    <main className="w-full bg-white text-blue-900 overflow-x-hidden">
       <div className='max-w-[1440px] mx-auto px-6'>
         {/* Services Section */}
         <motion.section
@@ -108,51 +108,23 @@ export default function Home() {
         </motion.section>
 
         {/* Industries Section */}
-        {/* <motion.section
-          id="industries"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="py-10 px-6 bg-blue-50"
-        >
-          <h2 className="text-3xl font-bold text-center mb-10 flex items-center justify-center gap-2">
-            <Factory className="text-blue-700" /> Industries We Serve
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { icon: <UtensilsCrossed size={36} className="text-pink-500 mb-2" />, label: 'Hospitality' },
-              { icon: <ShoppingCart size={36} className="text-yellow-500 mb-2" />, label: 'E-commerce' },
-              { icon: <Car size={36} className="text-green-600 mb-2" />, label: 'Automobile' },
-              { icon: <Blocks size={36} className="text-purple-600 mb-2" />, label: 'Others' }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                className="bg-white p-6 rounded-lg hover:shadow-md transition"
-                whileHover={{ scale: 1.06 }}
-              >
-                {item.icon}
-                <p className="text-blue-900 font-medium">{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section> */}
-        <section className="py-14 px-6 bg-blue-50 relative overflow-hidden">
-          <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">Industries We Serve</h2>
 
-          <div className="relative max-w-[1440px] mx-auto px-10 overflow-x-hidden">
+        <section className="py-14 px-6 bg-blue-50 relative font-sans">
+          <h2 className="text-3xl font-bold text-center mb-10 text-[#1d3a70]">Industries We Serve</h2>
+
+          <div className="relative max-w-[1440px] mx-auto px-4 md:px-10 overflow-hidden">
             {/* Navigation Buttons */}
             <button
               ref={prevRef as any}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-blue-100 w-10 h-10 flex items-center justify-center"
+              className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-blue-100 w-10 h-10 flex items-center justify-center"
             >
-              <ChevronLeft className="text-blue-700" />
+              <ChevronLeft className="text-[#1d3a70]" />
             </button>
             <button
               ref={nextRef as any}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-blue-100 w-10 h-10 flex items-center justify-center"
+              className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-blue-100 w-10 h-10 flex items-center justify-center"
             >
-              <ChevronRight className="text-blue-700" />
+              <ChevronRight className="text-[#1d3a70]" />
             </button>
 
             <Swiper
@@ -180,7 +152,7 @@ export default function Home() {
                 1024: { slidesPerView: 3 },
               }}
               modules={[Navigation, Autoplay]}
-              className="pl-12 pr-12 !overflow-visible"
+              className="!overflow-visible"
             >
               {industries.map((item, idx) => (
                 <SwiperSlide key={idx} className="!h-auto">
@@ -188,23 +160,20 @@ export default function Home() {
                     animate={{
                       scale: activeIndex === idx ? 1 : 0.97,
                       boxShadow: activeIndex === idx
-                        ? '0 8px 30px rgba(59,130,246,0.15)'
-                        : '0 1px 6px rgba(0,0,0,0.05)',
+                        ? '0 8px 30px rgba(29, 58, 112, 0.15)'
+                        : '0 1px 6px rgba(0, 0, 0, 0.05)',
                       zIndex: activeIndex === idx ? 10 : 1
                     }}
                     transition={{ duration: 0.4 }}
-                    className={`bg-white rounded-2xl text-center p-8 md:p-10 transition-all duration-300 cursor-pointer
-        border ${activeIndex === idx ? 'border-blue-500 ring-2 ring-blue-200' : 'border-blue-100'}`}
+                    className={`bg-white rounded-2xl text-center px-6 py-8 md:p-10 transition-all duration-300 cursor-pointer
+              border ${activeIndex === idx ? 'border-[#2f63b4] ring-2 ring-[#c6dbf9]' : 'border-blue-100'}`}
                   >
                     <div className="mb-4 flex justify-center">{item.icon}</div>
-                    <h3 className="text-xl font-bold text-blue-900 tracking-tight mb-2">{item.label}</h3>
-                    <p className="text-sm text-blue-800/80 leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <h3 className="text-[20px] font-semibold text-[#1d3a70] mb-2">{item.label}</h3>
+                    <p className="text-[16px] text-[#5c6c8a] leading-relaxed max-w-[90%] mx-auto">{item.desc}</p>
                   </motion.div>
                 </SwiperSlide>
               ))}
-
             </Swiper>
           </div>
         </section>
