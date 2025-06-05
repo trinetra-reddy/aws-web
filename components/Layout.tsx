@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import Hero from './Hero'
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const router = useRouter()
@@ -91,55 +91,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
       {/* Hero Section only for the home page */}
       {pathname == '/' && (
-        <motion.div>
-          <motion.section
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="px-6 py-16 bg-gradient-to-br from-blue-100 via-white to-blue-50 text-blue-900 rounded-xl"
-          >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-              <motion.div
-                className="w-full md:w-1/2"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Image
-                  src="/assets/hero.png"
-                  alt="Service Graphic"
-                  width={600}
-                  height={500}
-                  className="rounded-lg drop-shadow-md"
-                />
-              </motion.div>
-              <motion.div
-                className="w-full md:w-1/2 text-center md:text-left"
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-                  Build Smarter.<br className="hidden md:block" /> Grow Faster.
-                </h1>
-                <p className="text-lg text-black mb-6">
-                  We design high-performance web and mobile apps to help startups and businesses scale faster.
-                </p>
-                <button className="bg-blue-700 hover:bg-blue-900 text-white px-6 py-3 rounded font-semibold shadow transition">
-                  Request a Demo
-                </button>
-              </motion.div>
-            </div>
-          </motion.section>
-        </motion.div>
+        <Hero></Hero>
       )}
       <main className="min-h-screen bg-blue-50">{children}</main>
-
-      {/* <footer className="bg-blue-900 text-white text-center py-6 mt-10">
-        
-        <p>&copy; {new Date().getFullYear()} Anantha Web Solutions. All rights reserved.</p>
-      </footer> */}
       <footer className="bg-blue-900 text-white py-12 px-6 mt-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
