@@ -1,11 +1,8 @@
 'use client'
 import { motion } from 'framer-motion'
 import {
-  Rocket,
-  Factory,
   Quote,
   MonitorSmartphone,
-  Smartphone,
   ShieldCheck,
   ChevronLeft,
   ChevronRight
@@ -13,50 +10,55 @@ import {
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
-import {
-  UtensilsCrossed,
-  ShoppingCart,
-  Car,
-  Blocks
-} from 'lucide-react'
+import { Autoplay, Navigation } from 'swiper/modules'
 import { useRef, useState } from 'react'
 import Image from 'next/image'
+import ServiceCard from '../components/ServiceCard'
+import { servicesData } from '../data/ServicesData'
+import IndustryGrid from '../components/IndustryGrid'
 export default function Home() {
   const industries = [
     {
       label: 'Hospitality',
-      icon: <UtensilsCrossed size={36} className="text-pink-500" />,
+      // icon: <UtensilsCrossed size={36} className="text-pink-500" />,
+      icon: <Image src="/assets/Hospital-room.svg" alt="Hospitality" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Streamlined booking, dining, and guest services with powerful digital tools.'
     },
     {
       label: 'E-commerce',
-      icon: <ShoppingCart size={36} className="text-yellow-500" />,
+      // icon: <ShoppingCart size={36} className="text-yellow-500" />,
+      icon: <Image src="/assets/Ecommerce.svg" alt="Ecommerce" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Sell smarter with optimized storefronts, carts, and backend logistics.'
     },
+
     {
       label: 'Automobile',
-      icon: <Car size={36} className="text-green-600" />,
+      // icon: <Car size={36} className="text-green-600" />,
+      icon: <Image src="/assets/automobile.svg" alt="Automobile" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Automate inventory, bookings, and servicing for the automotive industry.'
     },
     {
       label: 'Real Estate',
-      icon: <Blocks size={36} className="text-purple-600" />,
+      // icon: <Blocks size={36} className="text-purple-600" />, c:\Users\alamu\Downloads\Realestate.svg
+      icon: <Image src="/assets/Realestate.svg" alt="Real Estate" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Showcase listings and manage leads with modern property tech platforms.'
     },
     {
       label: 'Healthcare',
-      icon: <ShieldCheck size={36} className="text-red-600" />,
+      // icon: <ShieldCheck size={36} className="text-red-600" />,
+      icon: <Image src="/assets/Health-care.svg" alt="Health care" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Digital solutions for appointment scheduling, records, and patient engagement.'
     },
     {
       label: 'Logistics',
-      icon: <Car size={36} className="text-indigo-500" />,
+      // icon: <Car size={36} className="text-indigo-500" />, 
+      icon: <Image src="/assets/Logistics.svg" alt="Logistics" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Track fleets, optimize deliveries, and manage operations efficiently.'
     },
     {
       label: 'Education',
-      icon: <MonitorSmartphone size={36} className="text-blue-600" />,
+      // icon: <ShieldCheck size={36} className="text-red-600" />,
+      icon: <Image src="/assets/Education.svg" alt="Education" width={600} height={400} className="w-full h-auto rounded-xl" />,
       desc: 'Empowering schools and learners with digital classrooms and portals.'
     }
   ];
@@ -124,110 +126,18 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="py-14 px-6 bg-white"
         >
-          <h2 className="text-3xl font-bold text-center mb-10 flex items-center justify-center gap-2">
-            <Rocket className="text-yellow-500" /> Our Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-              icon: <MonitorSmartphone size={40} className="text-blue-700" />,
-              title: 'Web Applications',
-              desc: 'Tailored web apps that align with your business objectives.'
-            }, {
-              icon: <Smartphone size={40} className="text-indigo-600" />,
-              title: 'Mobile Apps',
-              desc: 'Cross-platform mobile solutions with native performance.'
-            }, {
-              icon: <Rocket size={40} className="text-yellow-500" />,
-              title: 'Product Launch',
-              desc: 'Go from idea to launch with our rapid MVP development.'
-            }].map((service, i) => (
-              <motion.div
-                key={i}
-                className="cursor-pointer bg-blue-50 p-6 rounded-xl border border-blue-100 flex items-start gap-4 hover:shadow-md transition"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                {service.icon}
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                  <p className="text-black">{service.desc}</p>
-                </div>
-              </motion.div>
+
+          <h1 className="text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Services</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {servicesData.map((service, index) => (
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </div>
         </motion.section>
 
         {/* Industries Section */}
-
-        <section className="py-14 px-6 bg-blue-50 relative font-sans">
-          <h2 className="text-3xl font-bold text-center mb-10 text-[#1d3a70]">Industries We Serve</h2>
-
-          <div className="relative max-w-[1440px] mx-auto px-4 md:px-10 overflow-hidden">
-            {/* Navigation Buttons */}
-            <button
-              ref={prevRef as any}
-              className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-blue-100 w-10 h-10 flex items-center justify-center"
-            >
-              <ChevronLeft className="text-[#1d3a70]" />
-            </button>
-            <button
-              ref={nextRef as any}
-              className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-blue-100 w-10 h-10 flex items-center justify-center"
-            >
-              <ChevronRight className="text-[#1d3a70]" />
-            </button>
-
-            <Swiper
-              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-              slidesPerView={1}
-              spaceBetween={24}
-              loop={true}
-              speed={600}
-              autoplay={{ delay: 3500, disableOnInteraction: false }}
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current
-              }}
-              onInit={(swiper) => {
-                // @ts-ignore
-                swiper.params.navigation.prevEl = prevRef.current
-                // @ts-ignore
-                swiper.params.navigation.nextEl = nextRef.current
-                swiper.navigation.init()
-                swiper.navigation.update()
-              }}
-              breakpoints={{
-                320: { slidesPerView: 1 },
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-              }}
-              modules={[Navigation, Autoplay]}
-              className="!overflow-visible"
-            >
-              {industries.map((item, idx) => (
-                <SwiperSlide key={idx} className="!h-auto">
-                  <motion.div
-                    animate={{
-                      scale: activeIndex === idx ? 1 : 0.97,
-                      boxShadow: activeIndex === idx
-                        ? '0 8px 30px rgba(29, 58, 112, 0.15)'
-                        : '0 1px 6px rgba(0, 0, 0, 0.05)',
-                      zIndex: activeIndex === idx ? 10 : 1
-                    }}
-                    transition={{ duration: 0.4 }}
-                    className={`bg-white rounded-2xl text-center px-6 py-8 md:p-10 transition-all duration-300 cursor-pointer
-              border ${activeIndex === idx ? 'border-[#2f63b4] ring-2 ring-[#c6dbf9]' : 'border-blue-100'}`}
-                  >
-                    <div className="mb-4 flex justify-center">{item.icon}</div>
-                    <h3 className="text-[20px] text-xl font-bold mb-2">{item.label}</h3>
-                    <p className="text-[16px] leading-relaxed max-w-[90%] mx-auto text-black">{item.desc}</p>
-                  </motion.div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </section>
-
+      
+        <IndustryGrid></IndustryGrid>
         {/* Testimonials Section */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}

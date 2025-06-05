@@ -5,44 +5,14 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-const services = [
-  {
-    title: 'Custom Web Solutions',
-    image: '/assets/CustomWebSolutions.png',
-    desc: `At Anantha web solutions, we specialize in creating custom web solutions that cater to your specific business requirements. Our team of experts utilizes the latest technologies to build efficient, secure, and scalable applications.`
-  },
-  {
-    title: 'Exceptional User Experience',
-    image: '/assets/Exceptional-User-Experience.webp',
-    desc: `User experience is at the forefront of what we do. Our design team is dedicated to crafting visually stunning and highly functional interfaces that resonate with your target audience.`
-  },
-  {
-    title: 'Driving Innovation in Technology',
-    image: '/assets/Driving-Innovation-Technology.webp',
-    desc: `We are passionate about driving innovation. Our team is always exploring new tools, frameworks, and methodologies to bring the best solutions to our clients.`
-  },
-  {
-    title: 'Future-Ready Digital Solutions',
-    image: '/assets/Future-Ready-Digital-Solutions.webp',
-    desc: `We design and develop applications that can adapt to future technological advancements. Our scalable architecture ensures you're prepared for what comes next.`
-  },
-  {
-    title: 'Reliable Maintenance and Support',
-    image: '/assets/Reliable-Maintenance-Support.webp',
-    desc: `We offer reliable maintenance and support services to ensure the longevity of your digital solutions. Your success is our priority.`
-  },
-  {
-    title: 'Industry-Specific Solutions',
-    image: '/assets/Industry-Specific-Solutions.webp',
-    desc: `We offer industry-specific solutions tailored to meet the unique challenges faced by each sector.`
-  },
-];
+import ServiceCard from '../components/ServiceCard';
+import { servicesData } from '../data/ServicesData';
 
 export default function Services() {
   useEffect(() => {
     AOS.init({ once: true, duration: 800 });
   }, []);
+
   const fadeInVariants = {
     hidden: { opacity: 0, y: 40 },
     show: (i = 0) => ({
@@ -51,6 +21,7 @@ export default function Services() {
       transition: { duration: 0.6, delay: i * 0.15 }
     })
   };
+
   return (
     <main className="w-full bg-white text-blue-900 px-6 py-8">
       {/* Sub Hero section */}
@@ -96,25 +67,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto py-8">
         <h1 className="text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Services</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="text-center"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={400}
-                height={250}
-                className="rounded-lg mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-[20px] text-xl font-bold mb-2">{service.title}</h3>
-              <p className="text-[16px] leading-relaxed max-w-[90%] mx-auto text-black">
-                {service.desc}
-              </p>
-            </motion.div>
+          {servicesData.map((service, index) => (
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
       </div>
