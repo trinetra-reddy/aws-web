@@ -4,14 +4,9 @@ import {
   Quote,
   MonitorSmartphone,
   ShieldCheck,
-  ChevronLeft,
-  ChevronRight
 } from 'lucide-react'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { Autoplay, Navigation } from 'swiper/modules'
-import { useRef, useState } from 'react'
 import Image from 'next/image'
 import ServiceCard from '../components/ServiceCard'
 import { servicesData } from '../data/ServicesData'
@@ -62,9 +57,6 @@ export default function Home() {
       desc: 'Empowering schools and learners with digital classrooms and portals.'
     }
   ];
-  const prevRef = useRef(null)
-  const nextRef = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
   const fadeInVariants = {
     hidden: { opacity: 0, y: 40 },
     show: (i = 0) => ({
