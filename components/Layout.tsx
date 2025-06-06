@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <section className={ubuntu.variable}>
       <header className="bg-blue-900 shadow-md sticky top-0 z-50 transition font-sans">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-white">
+        <div className="container mx-auto py-4 flex justify-between items-center text-white">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -106,8 +106,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main className="min-h-screen bg-blue-50 font-sans text-base md:text-lg">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12 px-6 mt-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-base">
+      <footer className="bg-blue-900 text-white py-12 px-6 font-sans">
+        <div className="container items-center mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-base">
           <div>
             {/* <h2 className="text-2xl font-bold italic mb-4">Anantha Web Solutions</h2> */}
             <Image

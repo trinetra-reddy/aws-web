@@ -15,7 +15,7 @@ const fadeInVariants = {
 export default function About() {
   return (
     <main className="w-full bg-white text-blue-900 px-6 py-16">
-      <div className="max-w-7xl mx-auto space-y-20">
+      <div className="container mx-auto space-y-20">
         {/* Page Heading */}
         <motion.h1
           className="text-4xl md:text-5xl font-extrabold leading-tight text-center text-[#1d3a70]"

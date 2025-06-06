@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Contact() {
   return (
-    <main className="w-full max-w-5xl mx-auto px-4 py-10 font-sans">
+    <main className="w-full container mx-auto  py-10 font-sans">
       
       {/* Page Heading */}
       <motion.section

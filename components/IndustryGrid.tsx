@@ -18,10 +18,10 @@ export default function IndustryGrid({ items, className = '' }: any) {
   const nextRef = useRef(null)
 
   return (
-    <section className="py-14 px-6 bg-blue-50 relative font-sans">
+    <section className="py-14 bg-blue-50 relative font-sans container mx-auto">
       <h2 className="text-3xl font-bold text-center mb-10 text-[#1d3a70]">Industries We Serve</h2>
 
-      <div className="relative max-w-[1440px] mx-auto px-4 md:px-10 overflow-hidden">
+      <div className="relative  mx-auto  md:px-10 overflow-hidden">
         {/* Navigation Buttons */}
         <button
           ref={prevRef as any}

@@ -6,8 +6,8 @@ import { industriesData } from '../data/Industriesdata'
 
 export default function Industries() {
   return (
-    <main className="w-full bg-white text-blue-900 px-6 py-14 font-sans">
-      <div className="max-w-[1440px] mx-auto px-6">
+    <main className="w-full bg-white text-blue-900 py-14 font-sans">
+      <div className="mx-auto container">
 
         {/* Hero Section */}
         <section className="flex flex-col md:flex-row items-center gap-10 mb-20">
@@ -42,14 +42,16 @@ export default function Industries() {
             />
           </motion.div>
         </section>
-
+      </div>
+      <div className=" bg-blue-50">
         {/* Industry Cards */}
-        <section className="mx-auto mb-20">
+        <section className="mb-20 mx-auto container">
           <IndustryGrid items={industriesData} />
         </section>
-
+      </div>
+      <div className=" bg-white">
         {/* CTA Section */}
-        <section className="max-w-[1440px] mx-auto px-4 py-14">
+        <section className="container mx-auto px-4 py-14">
           <motion.div
             className="mb-10 max-w-6xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +88,6 @@ export default function Industries() {
             </div>
           </div>
         </section>
-
       </div>
     </main>
   )

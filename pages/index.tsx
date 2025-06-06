@@ -68,10 +68,11 @@ export default function Home() {
 
   return (
     <main className="w-full bg-white text-blue-900 overflow-x-hidden">
-      <div className='max-w-[1440px] mx-auto px-6'>
+      <div className='bg-blue-50'>
+
         {/* Sub Hero section */}
         <motion.section
-          className="py-14 px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+          className="py-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-center container mx-auto"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -109,43 +110,46 @@ export default function Home() {
             />
           </motion.div>
         </motion.section>
-        {/* Services Section */}
-        <motion.section
-          id="services"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="py-14 px-6 bg-white"
-        >
+        <div className='bg-white'>
+          {/* Services Section */}
+          <motion.section
+            id="services"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="py-14 container mx-auto"
+          >
 
-          <h1 className="text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Services</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {servicesData.map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} />
-            ))}
-          </div>
-        </motion.section>
-
+            <h1 className="text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Services</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {servicesData.map((service, index) => (
+                <ServiceCard key={index} service={service} index={index} />
+              ))}
+            </div>
+          </motion.section>
+        </div>
+        
         {/* Industries Section */}
-      
         <IndustryGrid></IndustryGrid>
         {/* Testimonials Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="py-8 px-6 bg-white"
-        >
-          <h2 className="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-2">
-            <Quote className="text-blue-600" /> What Our Clients Say
-          </h2>
-          <blockquote className="italic border-l-4 border-blue-900 pl-6 text-black max-w-3xl mx-auto">
-            “Anantha Web Solutions delivered a product that transformed our workflow. They were fast, professional, and responsive.”
-          </blockquote>
-          <p className="text-right font-medium mt-2 text-blue-700 max-w-3xl mx-auto">— John D, CTO</p>
-        </motion.section>
+        <div className='bg-white'>
+          <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="py-8 px-6 bg-white container mx-auto"
+          >
+            <h2 className="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-2">
+              <Quote className="text-blue-600" /> What Our Clients Say
+            </h2>
+            <blockquote className="italic border-l-4 border-blue-900 pl-6 text-black max-w-3xl mx-auto">
+              “Anantha Web Solutions delivered a product that transformed our workflow. They were fast, professional, and responsive.”
+            </blockquote>
+            <p className="text-right font-medium mt-2 text-blue-700 max-w-3xl mx-auto">— John D, CTO</p>
+          </motion.section>
+        </div>
 
         {/* Expertise Section */}
         <motion.section
@@ -153,10 +157,10 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="py-10 px-6 bg-blue-50"
+          className="py-10 px-6 bg-blue-50 container mx-auto"
         >
           <h2 className="text-3xl font-bold text-center mb-10 flex items-center justify-center gap-2">
-            <MonitorSmartphone className="text-blue-700" /> Our Expertise
+             Our Expertise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[{
