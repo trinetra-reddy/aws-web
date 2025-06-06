@@ -6,7 +6,7 @@ coverage/
 [Bb]in/
 /package-lock.json
 /yarn.lock
-node_modules
+/node_modules
 .next/
 package-lock.json
 yarn.lock
@@ -29,3 +29,9 @@ consumerstudio/dist
 # information for Eclipse / Flash Builder.
 .DS_Store
 .idea
+
+# testing
+/coverage
+
+# production
+/build

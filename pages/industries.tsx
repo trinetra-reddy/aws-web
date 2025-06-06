@@ -38,7 +38,7 @@ export default function Industries() {
               alt="Industries Graphic"
               width={600}
               height={450}
-              className="rounded-xl shadow-xl w-full h-auto"
+              className="rounded-xl w-full h-auto"
             />
           </motion.div>
         </section>

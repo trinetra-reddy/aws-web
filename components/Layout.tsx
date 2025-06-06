@@ -7,6 +7,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Hero from './Hero'
 import Image from 'next/image'
+import { Ubuntu } from 'next/font/google'
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-ubuntu',
+})
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -24,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const isActive = (href: string) => router.pathname === href
 
   return (
-    <>
+    <section className={ubuntu.variable}>
       <header className="bg-blue-900 shadow-md sticky top-0 z-50 transition font-sans">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-white">
           <motion.div
@@ -33,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             transition={{ duration: 0.5 }}
           >
             <Image
-              src="/assets/logo.webp"
+              src="/assets/logos/anantha_white.png"
               alt="logo"
               width={200}
               height={200}
@@ -103,7 +109,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <footer className="bg-blue-900 text-white py-12 px-6 mt-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-base">
           <div>
-            <h2 className="text-2xl font-bold italic mb-4">Anantha Web Solutions</h2>
+            {/* <h2 className="text-2xl font-bold italic mb-4">Anantha Web Solutions</h2> */}
+            <Image
+              src="/assets/logos/anantha_white.png"
+              alt="logo"
+              width={200}
+              height={200}
+              priority
+            />
           </div>
 
           <div>
@@ -161,6 +174,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <a href="#" className="hover:underline">Cookies Settings</a>
         </div>
       </footer>
-    </>
+    </section>
   )
 }
