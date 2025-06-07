@@ -1,179 +1,146 @@
 'use client'
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { usePathname } from 'next/navigation'
-import Hero from './Hero'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { Ubuntu } from 'next/font/google'
-const ubuntu = Ubuntu({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-ubuntu',
-})
+
+const Hero = dynamic(() => import('../components/Hero'), { ssr: false })
+
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['300', '400', '500', '700'], variable: '--font-ubuntu' })
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+]
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
-
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
-    { href: '/industries', label: 'Industries' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
-  ]
-
   const isActive = (href: string) => router.pathname === href
 
-  return (
-    <section className={ubuntu.variable}>
-      <header className="bg-blue-900 shadow-md sticky top-0 z-50 transition font-sans">
-        <div className="container mx-auto py-4 flex justify-between items-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Image
-              src="/assets/logos/anantha_white.png"
-              alt="logo"
-              width={200}
-              height={200}
-              priority
-            />
-          </motion.div>
+  // Accessibility: prevent background scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+  }, [menuOpen])
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-6 items-center text-lg font-semibold tracking-wide">
-            {navLinks.map((link) => (
-              <motion.div key={link.href} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href={link.href}
-                  className={`px-3 py-2 rounded transition-colors ${isActive(link.href)
-                      ? 'text-white underline underline-offset-4'
-                      : 'text-white hover:text-white'
-                    }`}
-                >
-                  {link.label}
-                </Link>
-              </motion.div>
+  return (
+    <div className={`${ubuntu.variable} font-sans text-blue-900`}> 
+      <header className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
+        <div className="container mx-auto py-4 flex justify-between items-center">
+          <Link href="/" aria-label="Go to homepage" prefetch>
+            <Image src="/assets/logos/anantha_white.png" alt="Anantha Web Solutions Logo" width={160} height={60} priority />
+          </Link>
+
+          <nav aria-label="Primary navigation" className="hidden md:flex space-x-6 text-lg font-medium">
+            {navLinks.map(link => (
+              <Link
+                key={link.href}
+                href={link.href}
+                prefetch
+                className={`px-3 py-2 ${isActive(link.href) ? 'underline underline-offset-4' : 'hover:underline'}`}
+              >
+                {link.label}
+              </Link>
             ))}
           </nav>
 
-          {/* Mobile Toggle */}
           <motion.button
-            className="md:hidden text-white"
+            aria-label="Toggle mobile menu"
+            aria-expanded={menuOpen}
+            className="md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.95 }}
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {menuOpen && (
-            <motion.div
+            <motion.nav
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="md:hidden px-4 pb-4 space-y-2 bg-blue-900 text-white shadow-md text-lg"
+              className="md:hidden px-4 pb-4 bg-blue-900 text-white shadow-md text-base font-medium"
+              aria-label="Mobile navigation"
             >
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block py-2 px-2 font-medium rounded ${isActive(link.href)
-                      ? 'bg-blue-800 text-white font-semibold'
-                      : 'hover:bg-blue-800 hover:text-white'
-                    }`}
+                  prefetch
+                  className={`block py-2 ${isActive(link.href) ? 'font-semibold underline' : 'hover:underline'}`}
                 >
                   {link.label}
                 </Link>
               ))}
-            </motion.div>
+            </motion.nav>
           )}
         </AnimatePresence>
       </header>
 
-      {/* Hero Section only for home page */}
       {pathname === '/' && <Hero />}
 
-      <main className="min-h-screen bg-blue-50 font-sans text-base md:text-lg">{children}</main>
+      <main id="main-content" className="min-h-screen bg-blue-50">
+        {children}
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12 px-6 font-sans">
-        <div className="container items-center mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-base">
-          <div>
-            {/* <h2 className="text-2xl font-bold italic mb-4">Anantha Web Solutions</h2> */}
-            <Image
-              src="/assets/logos/anantha_white.png"
-              alt="logo"
-              width={200}
-              height={200}
-              priority
-            />
-          </div>
+      <footer className="bg-blue-900 text-white py-12 px-6" role="contentinfo">
+        <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <Image src="/assets/logos/anantha_white.png" alt="Anantha Web Solutions Logo" width={160} height={60} />
 
-          <div>
+          <nav aria-label="Footer - Quick Links">
             <h3 className="font-semibold text-lg mb-3">Quick Links</h3>
             <ul className="space-y-2">
-              <li className="cursor-pointer hover:underline">About Us</li>
-              <li className="cursor-pointer hover:underline">Services</li>
-              <li className="cursor-pointer hover:underline">Contact Us</li>
-              <li className="cursor-pointer hover:underline">Blog</li>
-              <li className="cursor-pointer hover:underline">Careers</li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
+          <nav aria-label="Footer - Resources">
             <h3 className="font-semibold text-lg mb-3">Resources</h3>
             <ul className="space-y-2">
-              <li className="cursor-pointer hover:underline">Case Studies</li>
-              <li className="cursor-pointer hover:underline">FAQs</li>
-              <li className="cursor-pointer hover:underline">Testimonials</li>
-              <li className="cursor-pointer hover:underline">Support</li>
-              <li className="cursor-pointer hover:underline">Sitemap</li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Sitemap</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
+          <nav aria-label="Footer - Social">
             <h3 className="font-semibold text-lg mb-3">Stay Connected</h3>
             <ul className="space-y-2">
-              <li className="cursor-pointer hover:underline">Facebook</li>
-              <li className="cursor-pointer hover:underline">Twitter</li>
-              <li className="cursor-pointer hover:underline">LinkedIn</li>
-              <li className="cursor-pointer hover:underline">Instagram</li>
-              <li className="cursor-pointer hover:underline">YouTube</li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-lg mb-3">Subscribe</h3>
-            <p className="mb-3 text-sm">Join our newsletter for updates on features and releases.</p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-3 py-2 rounded border border-white bg-transparent text-white placeholder-white text-sm"
-              />
-              <button className="bg-white text-black px-4 py-2 rounded text-sm font-medium">Subscribe</button>
-            </form>
-            <p className="text-xs mt-2">By subscribing, you agree to our Privacy Policy and consent to updates.</p>
-          </div>
+          </nav>
         </div>
+
         <hr className="my-8 border-white/20" />
         <div className="text-center text-sm space-x-4">
           <span>© 2024 Anantha Web Solutions. All rights reserved.</span>
           <a href="#" className="hover:underline">Privacy Policy</a>
           <a href="#" className="hover:underline">Terms of Service</a>
-          <a href="#" className="hover:underline">Cookies Settings</a>
+          <a href="#" className="hover:underline">Cookies</a>
         </div>
       </footer>
-    </section>
+    </div>
   )
 }

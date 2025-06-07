@@ -73,9 +73,9 @@ export default function About() {
             viewport={{ once: true }}
           >
             {[{
-              name: 'G. Baba Fakruddin', title: 'Director & Operations Head', img: '/assets/avatar-male1.jpg'
+              name: 'Baba Fakruddin', title: 'Director & Operations Head', img: '/assets/avatar-male1.jpg'
             },
-            { name: 'Trinethra Reddy', title: 'Director & Strategy Head', img: '/assets/avatar-male2.jpg' },
+            { name: 'vivitha', title: 'Developer', img: '/assets/avatar-male2.jpg' },
             { name: 'Teja sree', title: 'Lead Developer', img: '/assets/avatar-female.jpg' }
             ].map((member, idx) => (
               <motion.div
@@ -110,7 +110,7 @@ export default function About() {
             },
             { year: '2022', event: 'Delivered 50+ custom apps for clients globally.' },
             { year: '2023', event: 'Opened second office and doubled team size.' },
-            { year: '2024', event: 'Awarded for Best Emerging Tech Partner in APAC.' }
+            // { year: '2024', event: 'Awarded for Best Emerging Tech Partner in APAC.' }
             ].map((item, i) => (
               <li key={i}>
                 <span className="font-semibold text-blue-700">{item.year}</span> – {item.event}
