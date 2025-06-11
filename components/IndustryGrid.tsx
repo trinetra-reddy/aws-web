@@ -10,7 +10,7 @@ import 'swiper/css/pagination'
 import { useRef, useState } from 'react'
 import { Autoplay, Navigation } from 'swiper/modules'
 import Image from 'next/image'
-import { industriesData } from '../data/Industriesdata'
+import { industriesData } from '../data/IndustriesData'
 
 export default function IndustryGrid({ items, className = '' }: any) {
   const [activeIndex, setActiveIndex] = useState(0)

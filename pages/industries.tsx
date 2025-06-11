@@ -5,9 +5,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import IndustryGrid from '../components/IndustryGrid';
-import { industriesData } from '../data/Industriesdata';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { industriesData } from '../data/IndustriesData';
 
 export default function Industries() {
   useEffect(() => {
