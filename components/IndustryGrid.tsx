@@ -37,7 +37,7 @@ export default function IndustryGrid({ items, className = '' }: any) {
         </button>
         <Swiper
           centeredSlides={true}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          onSlideChange={(swiper:any) => setActiveIndex(swiper.realIndex)}
           slidesPerView={1}
           spaceBetween={24}
           loop={true}
@@ -47,7 +47,7 @@ export default function IndustryGrid({ items, className = '' }: any) {
             prevEl: prevRef.current,
             nextEl: nextRef.current
           }}
-          onInit={(swiper) => {
+          onInit={(swiper:any) => {
             // @ts-ignore
             swiper.params.navigation.prevEl = prevRef.current
             // @ts-ignore
