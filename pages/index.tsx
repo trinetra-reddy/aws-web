@@ -104,7 +104,7 @@ export default function Home() {
             <blockquote className="italic border-l-4 border-blue-900 pl-6 text-gray-800 max-w-3xl mx-auto">
               “Anantha Web Solutions transformed our operations with seamless digital tools. Fast, reliable, and forward-thinking.”
             </blockquote>
-            <p className="text-right text-blue-700 font-medium mt-2 max-w-3xl mx-auto">— John D, CTO</p>
+            {/* <p className="text-right text-blue-700 font-medium mt-2 max-w-3xl mx-auto">— John D, CTO</p> */}
           </motion.section>
 
           {/* Expertise */}

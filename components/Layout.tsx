@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, [menuOpen])
 
   return (
-    <div className={`${ubuntu.variable} font-sans text-blue-900`}> 
+    <div className={`${ubuntu.variable} font-sans text-blue-900`}>
       <header className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto py-4 flex justify-between items-center">
           <Link href="/" aria-label="Go to homepage" prefetch>
@@ -94,41 +94,57 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main id="main-content" className="min-h-screen bg-blue-50">
         {children}
       </main>
-
       <footer className="bg-blue-900 text-white py-12 px-6" role="contentinfo">
         <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-          <Image src="/assets/logos/anantha_white.png" alt="Anantha Web Solutions Logo" width={160} height={60} />
+          <Image
+            src="/assets/logos/anantha_white.png"
+            alt="Anantha Web Solutions Logo"
+            width={160}
+            height={60}
+          />
 
           <nav aria-label="Footer - Quick Links">
             <h3 className="font-semibold text-lg mb-3">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </nav>
-
-          <nav aria-label="Footer - Resources">
-            <h3 className="font-semibold text-lg mb-3">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#">Case Studies</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Sitemap</a></li>
+              {[
+                { href: '/services', label: 'Services' },
+                { href: '/industries', label: 'Industries' },
+                { href: '/about', label: 'About Us' },
+                { href: '/contact', label: 'Contact Us' },
+              ].map(link => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`hover:underline ${router.pathname === link.href ? 'underline font-semibold' : ''}`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
           <nav aria-label="Footer - Social">
             <h3 className="font-semibold text-lg mb-3">Stay Connected</h3>
             <ul className="space-y-2">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">YouTube</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/anantha-web-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                 href="https://wa.me/917013594249"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline">
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

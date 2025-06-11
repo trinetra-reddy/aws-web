@@ -1,8 +1,48 @@
 'use client'
 import { motion } from 'framer-motion'
 import BusinessHours from '../components/BusinessHours'
+import { useState } from 'react'
 
 export default function Contact() {
+
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+ 
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setStatus('loading');
+
+  const res = await fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      requirement: form.message,
+    }),
+  });
+
+  const data = await res.json();
+
+  if (res.ok) {
+    setStatus('success');
+    setForm({ name: '', email: '', phone: '', message: '' }); // reset form
+  } else {
+    console.error('Error:', data.message);
+    setStatus('error');
+  }
+};
+
   return (
     <main className="w-full px-4 md:px-8 py-12 font-sans text-[16px] md:text-[18px] leading-relaxed bg-gray-50">
 
@@ -96,34 +136,47 @@ export default function Contact() {
         transition={{ duration: 0.7 }}
       >
         <h3 className="text-2xl font-semibold text-blue-900 mb-6">Send Us a Message</h3>
-        <form className="space-y-4">
-          {[
-            { label: 'Name', type: 'text', placeholder: 'Your name' },
-            { label: 'Email', type: 'email', placeholder: 'you@example.com' },
-            { label: 'Phone', type: 'tel', placeholder: 'Your phone number' },
-          ].map((field, i) => (
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          {['name', 'email', 'phone'].map((field, i) => (
             <div key={i}>
-              <label className="block mb-1 font-medium text-blue-900">{field.label}</label>
+              <label className="block mb-1 font-medium text-blue-900">
+                {field[0].toUpperCase() + field.slice(1)}
+              </label>
               <input
-                type={field.type}
+                name={field}
+                type={field === 'email' ? 'email' : 'text'}
                 className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={field.placeholder}
-                required={field.type !== 'tel'}
+                placeholder={`Your ${field}`}
+                value={form[field as keyof typeof form]}
+                onChange={handleChange}
+                required={field !== 'phone'}
               />
             </div>
           ))}
+
           <div>
             <label className="block mb-1 font-medium text-blue-900">Requirement</label>
             <textarea
+              name="message"
               className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows={4}
               placeholder="Tell us what you need..."
+              value={form.message}
+              onChange={handleChange}
               required
             />
           </div>
-          <button className="w-full bg-blue-900 hover:bg-blue-800 text-white font-medium py-2 rounded transition duration-300">
-            Submit Inquiry
+
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-medium py-2 rounded transition duration-300"
+          >
+            {status === 'loading' ? 'Sending...' : 'Submit Inquiry'}
           </button>
+
+          {status === 'success' && <p className="text-green-600 mt-2">Email sent successfully!</p>}
+          {status === 'error' && <p className="text-red-600 mt-2">Something went wrong. Try again.</p>}
         </form>
       </motion.section>
     </main>
