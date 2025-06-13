@@ -18,17 +18,75 @@ export default function Home() {
   }
 
   return (
-    <>
-      <Head>
-        <title>Anantha Web Solutions | Empower Your Digital Growth</title>
-        <meta name="description" content="Custom web, mobile, and AI-powered platforms for businesses. Delivering secure, scalable, and performance-driven digital solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#1e3a8a" />
-        <link rel="canonical" href="https://ananthawebsolutions.com/" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="preload" as="image" href="/assets/digital-transformation.webp" type="image/webp" />
+    <>     
+ <Head>
+      {/* Primary Meta Tags */}
+      <title>Anantha Web Solutions | Empower Your Digital Growth</title>
+      <meta name="description" content="Custom web, mobile, and AI-powered platforms for businesses. Delivering secure, scalable, and performance-driven digital solutions." />
+      <meta name="keywords" content="web development, mobile apps, AI integration, software consulting, anantha web solutions,anantha digital, India tech company" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#1e3a8a" />
+      <link rel="canonical" href="https://ananthadigital.com/" />
+
+      {/* Fonts */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+
+      {/* Preload key image */}
+      <link rel="preload" as="image" href="/assets/digital-transformation.webp" type="image/webp" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:title" content="Anantha Web Solutions | Empower Your Digital Growth" />
+      <meta property="og:description" content="We deliver secure, scalable and performance-focused digital solutions, including web, mobile, and AI platforms." />
+      <meta property="og:image" content="https://ananthadigital.com/assets/og-image.jpg" />
+      <meta property="og:url" content="https://ananthadigital.com/" />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Anantha Web Solutions" />
+      <meta name="twitter:description" content="AI-powered web and mobile application development services." />
+      <meta name="twitter:image" content="https://ananthadigital.com/assets/og-image.jpg" />
+
+      {/* Structured Data (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Anantha Web Solutions Pvt Ltd",
+            "url": "https://ananthadigital.com",
+            "logo": "https://ananthadigital.com/assets/logo.webp",
+            "sameAs": [
+              "https://www.linkedin.com/company/ananthaweb",
+              "https://twitter.com/ananthaweb"
+            ],
+            "description": "We build custom web, mobile, and AI-powered platforms for startups and enterprises."
+          })
+        }}
+      />
+    </Head>
+      <title>Anantha Web Solutions | Web & Mobile App Development</title>
+        <meta name="description" content="We build world-class web and mobile applications tailored for your business. Based in India. Trusted globally." />
+        <meta name="keywords" content="Anantha Web Solutions, web development, mobile apps, React, Next.js, Tailwind, India software company" />
+        <meta name="author" content="Anantha Web Solutions Pvt Ltd" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Anantha Web Solutions" />
+        <meta property="og:description" content="Custom web and mobile app development services. Powered by Next.js & modern tech stack." />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://ananthadigital.com" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Anantha Web Solutions" />
+        <meta name="twitter:description" content="Top-tier web and mobile development solutions." />
+        <meta name="twitter:image" content="/og-image.jpg" />
+
+        <link rel="canonical" href="https://ananthadigital.com" />
       </Head>
 
       <main className="w-full bg-white text-blue-900 overflow-x-hidden font-sans">
