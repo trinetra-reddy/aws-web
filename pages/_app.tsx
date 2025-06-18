@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* Global Metadata (applies to all routes if individual pages lack <Head>) */}
       <Head>
         <title>Anantha Web Solutions</title>
         <meta
@@ -20,10 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://ananthawebsolutions.com/" />
-        <html lang="en" />
       </Head>
 
-      {/* Global Layout and Page */}
+ {/* Global Layout and Page */}
       <Layout>
         <Component {...pageProps} />
       </Layout>

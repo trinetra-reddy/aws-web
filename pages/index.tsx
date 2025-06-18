@@ -1,4 +1,3 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -20,21 +19,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* Primary Meta Tags */}
         <title>Anantha Web Solutions | Empower Your Digital Growth</title>
         <meta name="description" content="Custom web, mobile, and AI-powered platforms for businesses. Delivering secure, scalable, and performance-driven digital solutions." />
-        <meta name="keywords" content="web development, mobile apps, AI integration, software consulting, anantha web solutions,anantha digital, India tech company" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#1e3a8a" />
-        <link rel="canonical" href="https://ananthadigital.com/" />
-
-        {/* Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
-
-        {/* Preload key image */}
-        <link rel="preload" as="image" href="/assets/digital-transformation.webp" type="image/webp" />
+        <meta name="keywords" content="web development, mobile apps, AI integration, software consulting, anantha web solutions, anantha digital, India tech company" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Anantha Web Solutions | Empower Your Digital Growth" />
@@ -49,7 +36,7 @@ export default function Home() {
         <meta name="twitter:description" content="AI-powered web and mobile application development services." />
         <meta name="twitter:image" content="https://ananthadigital.com/assets/og-image.jpg" />
 
-        {/* Structured Data (JSON-LD) */}
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -68,6 +55,7 @@ export default function Home() {
           }}
         />
       </Head>
+
       <main className="w-full bg-white text-blue-900 overflow-x-hidden font-sans">
         <div className="bg-blue-50">
           {/* Hero Section */}
@@ -141,7 +129,6 @@ export default function Home() {
             <blockquote className="italic border-l-4 border-blue-900 pl-6 text-gray-800 max-w-3xl mx-auto">
               “Anantha Web Solutions transformed our operations with seamless digital tools. Fast, reliable, and forward-thinking.”
             </blockquote>
-            {/* <p className="text-right text-blue-700 font-medium mt-2 max-w-3xl mx-auto">— John D, CTO</p> */}
           </motion.section>
 
           {/* Expertise */}
