@@ -95,7 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <footer className="bg-blue-900 text-white py-12 px-6" role="contentinfo">
-        <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <Image
             src="/assets/logos/anantha_white.png"
             alt="Anantha Web Solutions Logo"
