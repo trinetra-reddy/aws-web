@@ -1,4 +1,3 @@
-// ✅ next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -7,12 +6,13 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
+    unoptimized: true, // ✅ disables dynamic optimization (needed for Netlify)
     formats: ['image/avif', 'image/webp'],
-    // domains: [], // Add domains if using external images
+    // domains: [], // only needed for external images
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-}
+};
 
 module.exports = nextConfig;
