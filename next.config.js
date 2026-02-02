@@ -8,7 +8,18 @@ const nextConfig = {
   images: {
     unoptimized: true, // ✅ disables dynamic optimization (needed for Netlify)
     formats: ['image/avif', 'image/webp'],
-    // domains: [], // only needed for external images
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+        pathname: '/**',
+      },
+    ],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
