@@ -2,10 +2,11 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
 import Layout from '../components/Layout';
+import { ThemeProvider } from '../context/ThemeContext';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider>
       <Head>
         <title>Anantha Web Solutions</title>
         <meta
@@ -21,10 +22,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="canonical" href="https://ananthawebsolutions.com/" />
       </Head>
 
- {/* Global Layout and Page */}
+      {/* Global Layout and Page */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </ThemeProvider>
   );
 }
