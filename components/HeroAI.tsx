@@ -64,10 +64,6 @@ export default function HeroAI() {
               Get Free AI Assessment
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/case-studies" className="btn-secondary">
-              View Our Work
-              <TrendingUp className="w-5 h-5" />
-            </Link>
           </motion.div>
 
           {/* Trust Bar */}

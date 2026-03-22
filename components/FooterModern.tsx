@@ -9,7 +9,7 @@ export default function FooterModern() {
 const router = useRouter()
 const { theme } = useTheme()
   return (
-     <footer className={`relative py-20 px-6 border-t-2 overflow-hidden ${
+     <footer className={`relative py-20 border-t-2 overflow-hidden ${
        theme === 'sunset'
          ? 'bg-gradient-to-br from-cream via-soft-peach to-cream border-coral-red/20 text-deep-charcoal'
          : 'bg-gradient-to-br from-sage via-mint to-sage border-forest-green/20 text-deep-navy'
@@ -18,22 +18,17 @@ const { theme } = useTheme()
               <div className={`absolute inset-0 bg-gradient-to-t pointer-events-none ${
                 theme === 'sunset' ? 'from-soft-peach/30 to-transparent' : 'from-mint/30 to-transparent'
               }`}></div>
-      
-              <div className="container mx-auto relative z-10">
+
+              <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                   <div className="lg:col-span-1">
                     <div className="mb-6 transform hover:scale-105 transition-transform duration-300 inline-block">
                       <Image
-                        src="/assets/logos/anantha_white.png"
+                        src="/assets/logos/ananthaweb.png"
                         alt="Anantha Web Solutions Logo"
                         width={180}
                         height={70}
                         className="h-14 w-auto"
-                        style={{
-                          filter: theme === 'sunset'
-                            ? 'brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(1234%) hue-rotate(180deg) brightness(95%) contrast(92%)'
-                            : 'brightness(0) saturate(100%) invert(28%) sepia(28%) saturate(1234%) hue-rotate(115deg) brightness(95%) contrast(92%)'
-                        }}
                       />
                     </div>
                     <p className={`text-base leading-relaxed mb-6 ${
@@ -165,20 +160,83 @@ const { theme } = useTheme()
                           account@ananthawebsolutions.com
                         </a>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <span className={`mt-1 ${
-                          theme === 'sunset' ? 'text-coral-red' : 'text-forest-green'
-                        }`}>📍</span>
-                        <span className="text-sm leading-relaxed">
-                          HPR LUXURY HOUSES,<br />
-                          Kakkalapalle Rural,<br />
-                          Andhra Pradesh, India
-                        </span>
-                      </li>
                     </ul>
                   </div>
                 </div>
-      
+
+                {/* Global Offices Section */}
+                <div className="mb-16">
+                  <h3 className={`font-bold text-2xl mb-8 text-center ${
+                    theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
+                  }`}>
+                    Our Global Offices
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* India Office */}
+                    <div className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
+                      theme === 'sunset'
+                        ? 'bg-coral-red/5 border-coral-red/20 hover:border-coral-red/40'
+                        : 'bg-forest-green/5 border-forest-green/20 hover:border-forest-green/40'
+                    }`}>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-2xl">🇮🇳</span>
+                        <h4 className={`font-bold text-lg ${
+                          theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
+                        }`}>India (HQ)</h4>
+                      </div>
+                      <p className={`text-sm leading-relaxed ${
+                        theme === 'sunset' ? 'text-deep-charcoal/70' : 'text-deep-navy/70'
+                      }`}>
+                        HPR LUXURY HOUSES,<br />
+                        Kakkalapalle Rural,<br />
+                        Andhra Pradesh, India
+                      </p>
+                    </div>
+
+                    {/* Canada Office */}
+                    <div className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
+                      theme === 'sunset'
+                        ? 'bg-coral-red/5 border-coral-red/20 hover:border-coral-red/40'
+                        : 'bg-forest-green/5 border-forest-green/20 hover:border-forest-green/40'
+                    }`}>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-2xl">🇨🇦</span>
+                        <h4 className={`font-bold text-lg ${
+                          theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
+                        }`}>Canada</h4>
+                      </div>
+                      <p className={`text-sm leading-relaxed ${
+                        theme === 'sunset' ? 'text-deep-charcoal/70' : 'text-deep-navy/70'
+                      }`}>
+                        380 Southdale Road East,<br />
+                        London, Ontario,<br />
+                        Canada
+                      </p>
+                    </div>
+
+                    {/* USA Office */}
+                    <div className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
+                      theme === 'sunset'
+                        ? 'bg-coral-red/5 border-coral-red/20 hover:border-coral-red/40'
+                        : 'bg-forest-green/5 border-forest-green/20 hover:border-forest-green/40'
+                    }`}>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-2xl">🇺🇸</span>
+                        <h4 className={`font-bold text-lg ${
+                          theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
+                        }`}>USA</h4>
+                      </div>
+                      <p className={`text-sm leading-relaxed ${
+                        theme === 'sunset' ? 'text-deep-charcoal/70' : 'text-deep-navy/70'
+                      }`}>
+                        1910 Manor View,<br />
+                        Cumming, GA 30041,<br />
+                        USA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className={`border-t pt-8 ${
                   theme === 'sunset' ? 'border-deep-charcoal/10' : 'border-deep-navy/10'
                 }`}>
@@ -189,15 +247,15 @@ const { theme } = useTheme()
                       © {new Date().getFullYear()} Anantha Web Solutions. All rights reserved.
                     </p>
                     <div className="flex flex-wrap gap-6 text-sm">
-                      <a href="#" className={`transition-colors duration-200 ${
+                      <Link href="/privacy-policy" className={`transition-colors duration-200 ${
                         theme === 'sunset' ? 'text-deep-charcoal/70 hover:text-deep-charcoal' : 'text-deep-navy/70 hover:text-deep-navy'
-                      }`}>Privacy Policy</a>
-                      <a href="#" className={`transition-colors duration-200 ${
+                      }`}>Privacy Policy</Link>
+                      <Link href="/terms-and-conditions" className={`transition-colors duration-200 ${
                         theme === 'sunset' ? 'text-deep-charcoal/70 hover:text-deep-charcoal' : 'text-deep-navy/70 hover:text-deep-navy'
-                      }`}>Terms of Service</a>
-                      <a href="#" className={`transition-colors duration-200 ${
+                      }`}>Terms & Conditions</Link>
+                      <Link href="/cookies" className={`transition-colors duration-200 ${
                         theme === 'sunset' ? 'text-deep-charcoal/70 hover:text-deep-charcoal' : 'text-deep-navy/70 hover:text-deep-navy'
-                      }`}>Cookies</a>
+                      }`}>Cookies</Link>
                     </div>
                   </div>
                 </div>

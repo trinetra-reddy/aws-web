@@ -6,7 +6,9 @@ import { Ubuntu } from 'next/font/google'
 
 const HeaderModern = dynamic(() => import('../components/HeaderModern'), { ssr: false })
 const HeroModern = dynamic(() => import('../components/HeroModern'), { ssr: false })
+const FooterModern = dynamic(() => import('../components/FooterModern'), { ssr: false })
 const ChatbotWidget = dynamic(() => import('../components/ChatbotWidget'), { ssr: false })
+const CookieBanner = dynamic(() => import('../components/CookieBanner'), { ssr: false })
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['300', '400', '500', '700'], variable: '--font-ubuntu' })
 
@@ -23,8 +25,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
 
+      {/* Footer */}
+      <FooterModern />
+
       {/* Chatbot Widget */}
       <ChatbotWidget />
+
+      {/* Cookie Banner */}
+      <CookieBanner />
     </div>
   )
 }

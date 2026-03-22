@@ -2,27 +2,30 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface ServiceCardProps {
   service: {
     title: string
     image: string
     desc: string
+    link: string
   }
   index: number
 }
 
 export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
-    <motion.div
-      className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-blue-200 transform hover:-translate-y-2"
-      data-aos="fade-up"
-      data-aos-delay={index * 100}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
+    <Link href={service.link}>
+      <motion.div
+        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-blue-300 transform hover:-translate-y-2 cursor-pointer"
+        data-aos="fade-up"
+        data-aos-delay={index * 100}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
       <div className="relative overflow-hidden h-56">
         <Image
           src={service.image}
@@ -51,6 +54,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           </span>
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+    </Link>
   )
 }

@@ -90,12 +90,7 @@ export default function CTAModern() {
                     Get Free Consultation
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link
-                    href="/case-studies"
-                    className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-full hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
-                  >
-                    View Our Work
-                  </Link>
+                 
                 </div>
 
                 {/* Trust Indicators */}

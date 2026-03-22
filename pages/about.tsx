@@ -2,7 +2,9 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { User } from 'lucide-react'
+import { User, Target, Users, Zap, Award, Globe, TrendingUp } from 'lucide-react'
+import { Player } from '@lottiefiles/react-lottie-player'
+import Head from 'next/head'
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -15,8 +17,14 @@ const fadeInVariants = {
 
 export default function About() {
   return (
-    <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-900 px-6 py-20">
-      <div className="container mx-auto space-y-24">
+    <>
+      <Head>
+        <title>About Us | Anantha Web Solutions</title>
+        <meta name="description" content="Learn about Anantha Web Solutions - transforming businesses through innovative digital solutions with global presence." />
+      </Head>
+
+      <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-900 px-6 pt-20 pb-20">
+        <div className="container mx-auto space-y-24 pt-20">
         {/* Page Heading */}
         <motion.div
           className="text-center"
@@ -35,27 +43,28 @@ export default function About() {
 
         {/* Mission Section */}
         <motion.section
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl shadow-xl p-8 md:p-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeInVariants}
         >
           <motion.div
-            className="rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1"
+            className="rounded-2xl overflow-hidden order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-20 blur-xl"></div>
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=533&fit=crop&q=80"
-                alt="Team collaborating on innovative digital solutions"
-                width={600}
-                height={400}
-                className="relative w-full h-auto object-cover rounded-2xl"
-              />
+              <div className="relative w-full max-w-md mx-auto">
+                <Player
+                  autoplay
+                  loop
+                  src="/assets/animations/web-design.json"
+                  style={{ width: '100%', height: '100%' }}
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -159,7 +168,88 @@ export default function About() {
             ))}
           </ul>
         </section>
+
+        {/* Stats Section */}
+        <section className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Impact in Numbers</h2>
+            <p className="text-xl text-white/90">Delivering excellence across the globe</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Globe, value: '3', label: 'Global Offices', suffix: '' },
+              { icon: Users, value: '500', label: 'Projects Delivered', suffix: '+' },
+              { icon: Award, value: '98', label: 'Client Satisfaction', suffix: '%' },
+              { icon: TrendingUp, value: '10', label: 'Industries Served', suffix: '+' }
+            ].map((stat, idx) => (
+              <motion.div
+                key={idx}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <div className="w-16 h-16 mx-auto mb-4 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-black mb-2">
+                  {stat.value}{stat.suffix}
+                </div>
+                <div className="text-sm md:text-base text-white/80 font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section>
+          <div className="text-center mb-16">
+            <span className="inline-block text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3">Why Choose Us</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">What Sets Us Apart</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              We combine innovation, expertise, and dedication to deliver exceptional results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Target,
+                title: 'Client-Focused Approach',
+                description: 'We prioritize your unique needs and challenges, delivering tailored solutions that drive real business value.'
+              },
+              {
+                icon: Zap,
+                title: 'Cutting-Edge Technology',
+                description: 'Leveraging the latest technologies and best practices to build scalable, future-proof solutions.'
+              },
+              {
+                icon: Globe,
+                title: 'Global Presence',
+                description: 'With offices in India, Canada, and USA, we provide 24/7 support and local expertise worldwide.'
+              }
+            ].map((feature, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-slate-100 hover:border-blue-200 transform hover:-translate-y-2"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{feature.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
       </div>
     </main>
+    </>
   )
 }

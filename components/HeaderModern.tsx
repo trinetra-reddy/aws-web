@@ -35,31 +35,22 @@ export default function HeaderModern() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/98 backdrop-blur-xl shadow-xl border-b border-gray-200'
-          : 'bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm'
+          ? 'bg-white shadow-xl border-b border-gray-200'
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Logo - Using Original Anantha Logo */}
+          {/* Logo */}
           <Link href="/" className="flex items-center group relative z-10">
             <div className="transform group-hover:scale-105 transition-transform duration-300">
               <Image
-                src="/assets/logos/anantha_white.png"
+                src="/assets/logos/ananthaweb.png"
                 alt="Anantha Web Solutions"
                 width={180}
                 height={70}
                 priority
-                className={`h-12 w-auto transition-all duration-300 ${
-                  isScrolled
-                    ? 'brightness-0'
-                    : 'drop-shadow-lg'
-                }`}
-                style={{
-                  filter: isScrolled
-                    ? undefined
-                    : 'brightness(0) saturate(100%) invert(28%) sepia(28%) saturate(1234%) hue-rotate(115deg) brightness(95%) contrast(92%)'
-                }}
+                className="h-12 w-auto transition-all duration-300"
               />
             </div>
           </Link>
@@ -73,12 +64,16 @@ export default function HeaderModern() {
                 className={`relative px-1 py-2 font-semibold text-base transition-all duration-300 group ${
                   isScrolled
                     ? 'text-gray-800 hover:text-forest-green'
-                    : 'text-gray-900 hover:text-forest-green'
+                    : 'text-black hover:text-forest-green drop-shadow-sm'
                 }`}
               >
                 {item.name}
                 {/* Underline - shows on active or hover */}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-forest-green transition-all duration-300 ${
+                <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${
+                  isScrolled
+                    ? 'bg-forest-green'
+                    : 'bg-forest-green'
+                } ${
                   isActive(item.href)
                     ? 'w-full'
                     : 'w-0 group-hover:w-full'

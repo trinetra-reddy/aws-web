@@ -41,14 +41,14 @@ module.exports = {
         'soft-peach': '#FFE5D9',
         'burnt-sienna': '#E76F51',
 
-        // Theme 2: "Forest Emerald" - Natural, Premium, Sophisticated
-        'forest-green': '#2D6A4F',
-        'emerald': '#40916C',
-        'sage': '#E9F5DB',
-        'amber': '#F4A261',
-        'deep-navy': '#1B263B',
-        'mint': '#B7E4C7',
-        'olive': '#52796F',
+        // Theme 2: "Ocean Blue" - Professional, Modern, Trustworthy
+        'forest-green': '#1d4ed8', // Changed to blue
+        'emerald': '#3b82f6', // Lighter blue
+        'sage': '#eff6ff', // Light blue background
+        'amber': '#f59e0b', // Keep amber as accent
+        'deep-navy': '#1e3a8a', // Deep blue
+        'mint': '#dbeafe', // Light blue
+        'olive': '#1e40af', // Medium blue
 
         primary: {
           50: '#FFF5F5',

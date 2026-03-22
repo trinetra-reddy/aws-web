@@ -18,7 +18,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#1e3a8a" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" />
+
+        {/* Favicons */}
+        <link rel="icon" href="/assets/favicons/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+        <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
         <link rel="canonical" href="https://ananthawebsolutions.com/" />
       </Head>
 
