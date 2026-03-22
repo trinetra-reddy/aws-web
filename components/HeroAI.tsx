@@ -79,7 +79,7 @@ export default function HeroAI() {
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-neural-green rounded-full animate-pulse" />
-              <span className="text-white font-semibold">500+</span> Projects Delivered
+              <span className="text-white font-semibold">50+</span> AI Projects Delivered
             </div>
             <div className="hidden sm:block w-px h-4 bg-gray-600" />
             <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export default function HeroAI() {
             <div className="hidden sm:block w-px h-4 bg-gray-600" />
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-cyber-purple rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-              <span className="text-white font-semibold">50+</span> AI Solutions Deployed
+              <span className="text-white font-semibold">5+</span> AI Solutions Deployed
             </div>
           </motion.div>
         </div>

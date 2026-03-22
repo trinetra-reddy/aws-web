@@ -96,7 +96,89 @@
     @apply container mx-auto px-4 md:px-6 lg:px-8;
   }
 
-  /* Typography */
+  /* Typography System - AI Consulting Redesign */
+
+  /* Hero Headlines */
+  .heading-hero {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 768px) {
+    .heading-hero {
+      font-size: 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-hero {
+      font-size: 72px;
+    }
+  }
+
+  /* Section Headlines */
+  .heading-section {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 768px) {
+    .heading-section {
+      font-size: 36px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-section {
+      font-size: 48px;
+    }
+  }
+
+  /* Subsection Headlines */
+  .heading-subsection {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  @media (min-width: 768px) {
+    .heading-subsection {
+      font-size: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-subsection {
+      font-size: 36px;
+    }
+  }
+
+  /* Body Text */
+  .text-body-lg {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .text-body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .text-body-sm {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Gradient Text Effect */
+  .text-gradient-ai {
+    @apply bg-gradient-to-r from-forest-green via-emerald to-amber bg-clip-text text-transparent;
+  }
+
+  /* Legacy Typography Classes (for backward compatibility) */
   .heading-1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight;
   }

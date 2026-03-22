@@ -3,10 +3,13 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useTheme } from '../context/ThemeContext'
-import AIAutomationAnimation from './animations/AIAutomationAnimation'
 import WebDevelopmentAnimation from './animations/WebDevelopmentAnimation'
 import MobileAppAnimation from './animations/MobileAppAnimation'
+import EcommerceAnimation from './animations/EcommerceAnimation'
+import UIUXAnimation from './animations/UIUXAnimation'
 import CloudSolutionsAnimation from './animations/CloudSolutionsAnimation'
+import AEMAnimation from './animations/AEMAnimation'
+import SupportAnimation from './animations/SupportAnimation'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -18,89 +21,111 @@ export default function ScrollRevealServices() {
 
   const services = [
     {
-      animation: AIAutomationAnimation,
-      title: 'AI & Automation',
-      desc: 'Transform your business with intelligent systems powered by machine learning and AI. We build custom automation solutions that reduce costs, improve efficiency, and unlock new opportunities for growth through predictive analytics and smart decision-making.',
-      gradient: 'from-purple-600 to-pink-600',
-      bgColor: 'bg-purple-500/10',
-      textColor: 'text-purple-600',
-      borderColor: 'border-purple-600',
-      hoverBg: 'hover:bg-purple-600'
-    },
-    {
       animation: WebDevelopmentAnimation,
       title: 'Web Development',
-      desc: 'Build powerful, scalable web applications with cutting-edge technologies. From responsive websites to complex web platforms, we create fast, secure, and user-friendly solutions that drive engagement and deliver exceptional performance across all devices.',
-      gradient: 'from-blue-600 to-cyan-600',
-      bgColor: 'bg-blue-500/10',
+      desc: 'Create powerful, responsive websites and web applications that deliver exceptional user experiences. From corporate websites to complex web platforms, we build scalable solutions using modern technologies like React, Next.js, and Node.js that drive engagement and business growth.',
+      bgColor: 'bg-blue-50',
       textColor: 'text-blue-600',
-      borderColor: 'border-blue-600',
+      borderColor: 'border-blue-500',
       hoverBg: 'hover:bg-blue-600'
     },
     {
       animation: MobileAppAnimation,
-      title: 'Mobile Apps',
-      desc: 'Create stunning native and cross-platform mobile applications for iOS and Android. We design intuitive user experiences and build robust apps that engage users, drive retention, and help your business reach customers wherever they are.',
-      gradient: 'from-green-600 to-emerald-600',
-      bgColor: 'bg-green-500/10',
+      title: 'Mobile Development',
+      desc: 'Build native and cross-platform mobile applications for iOS and Android that users love. We create intuitive, high-performance mobile apps with seamless functionality, beautiful interfaces, and robust architecture that keeps users engaged and coming back.',
+      bgColor: 'bg-purple-50',
+      textColor: 'text-purple-600',
+      borderColor: 'border-purple-500',
+      hoverBg: 'hover:bg-purple-600'
+    },
+    {
+      animation: EcommerceAnimation,
+      title: 'E-commerce Solutions',
+      desc: 'Launch and scale your online store with custom e-commerce platforms that convert visitors into customers. We develop secure, feature-rich shopping experiences with payment integration, inventory management, and analytics to maximize your revenue and streamline operations.',
+      bgColor: 'bg-green-50',
       textColor: 'text-green-600',
-      borderColor: 'border-green-600',
+      borderColor: 'border-green-500',
       hoverBg: 'hover:bg-green-600'
     },
     {
+      animation: UIUXAnimation,
+      title: 'UI/UX Design',
+      desc: 'Design beautiful, user-centered interfaces that delight customers and drive results. Our design team creates intuitive user experiences through research, prototyping, and testing, ensuring every interaction is purposeful, accessible, and aligned with your brand identity.',
+      bgColor: 'bg-pink-50',
+      textColor: 'text-pink-600',
+      borderColor: 'border-pink-500',
+      hoverBg: 'hover:bg-pink-600'
+    },
+    {
       animation: CloudSolutionsAnimation,
-      title: 'Cloud Solutions',
-      desc: 'Leverage the power of cloud computing to scale your business efficiently. We provide comprehensive cloud architecture, migration, and management services using AWS, Azure, and Google Cloud to ensure reliability, security, and cost-effectiveness.',
-      gradient: 'from-orange-600 to-red-600',
-      bgColor: 'bg-orange-500/10',
+      title: 'Cloud & DevOps',
+      desc: 'Modernize your infrastructure with cloud solutions and DevOps practices that improve reliability and accelerate delivery. We provide cloud architecture, CI/CD pipelines, containerization, and automation on AWS, Azure, and Google Cloud to scale your business efficiently.',
+      bgColor: 'bg-orange-50',
       textColor: 'text-orange-600',
-      borderColor: 'border-orange-600',
+      borderColor: 'border-orange-500',
       hoverBg: 'hover:bg-orange-600'
+    },
+    {
+      animation: AEMAnimation,
+      title: 'Adobe Experience Manager (AEM)',
+      desc: 'Build powerful enterprise content management solutions with Adobe Experience Manager. We create scalable, personalized digital experiences through custom component development, template design, workflow automation, and seamless integrations that empower your marketing teams to deliver exceptional content.',
+      bgColor: 'bg-red-50',
+      textColor: 'text-red-600',
+      borderColor: 'border-red-500',
+      hoverBg: 'hover:bg-red-600'
+    },
+    {
+      animation: SupportAnimation,
+      title: 'Support & Maintenance',
+      desc: 'Keep your applications running smoothly with ongoing support and maintenance services. We provide 24/7 monitoring, regular updates, security patches, performance optimization, and technical support to ensure your digital products remain secure, fast, and reliable.',
+      bgColor: 'bg-indigo-50',
+      textColor: 'text-indigo-600',
+      borderColor: 'border-indigo-500',
+      hoverBg: 'hover:bg-indigo-600'
     },
   ]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
+      // Animate title
       gsap.from('.section-title', {
         scrollTrigger: {
           trigger: '.section-title',
           start: 'top 80%',
         },
-        y: 100,
+        y: 50,
         opacity: 0,
         duration: 1,
         ease: 'power3.out',
       })
 
-      // Service items - one by one reveal
+      // Animate each service item from bottom to top
       services.forEach((_, index) => {
         const item = `.service-item-${index}`
-        
-        gsap.from(item, {
+
+        // Animate content from bottom
+        gsap.from(`${item} .service-content`, {
           scrollTrigger: {
             trigger: item,
             start: 'top 85%',
-            end: 'top 20%',
-            toggleActions: 'play none none reverse',
           },
-          x: index % 2 === 0 ? -100 : 100,
+          y: 60,
           opacity: 0,
-          rotation: index % 2 === 0 ? -5 : 5,
           duration: 1,
           ease: 'power3.out',
         })
 
-        // Icon rotation on scroll
-        gsap.to(`${item} .service-icon`, {
+        // Animate animation from bottom with slight delay
+        gsap.from(`${item} .service-animation`, {
           scrollTrigger: {
             trigger: item,
-            start: 'top 80%',
-            end: 'bottom 20%',
-            scrub: 1,
+            start: 'top 85%',
           },
-          rotation: 360,
-          ease: 'none',
+          y: 60,
+          opacity: 0,
+          duration: 1,
+          delay: 0.2,
+          ease: 'power3.out',
         })
       })
     }, sectionRef)
@@ -109,22 +134,14 @@ export default function ScrollRevealServices() {
   }, [])
 
   return (
-    <section ref={sectionRef} className={`relative py-32 overflow-hidden ${
-      theme === 'sunset'
-        ? 'bg-gradient-to-br from-cream via-white to-soft-peach'
-        : 'bg-gradient-to-br from-white via-mint/30 to-sage/50'
-    }`}>
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        {/* Section Title */}
-        <div className="section-title text-center mb-24">
+    <section ref={sectionRef} className="overflow-hidden">
+      {/* Section Title */}
+      <div className={`section-title text-center py-20 ${
+        theme === 'sunset'
+          ? 'bg-gradient-to-br from-cream via-white to-soft-peach'
+          : 'bg-gradient-to-br from-white via-mint/30 to-sage/50'
+      }`}>
+        <div className="container mx-auto px-6 lg:px-12">
           <h2 className={`text-5xl lg:text-6xl font-black mb-6 ${
             theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
           }`}>
@@ -134,68 +151,55 @@ export default function ScrollRevealServices() {
                 : 'from-forest-green to-emerald'
             } bg-clip-text text-transparent`}>Create</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive technology solutions that drive real business results
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive digital solutions designed to elevate your business and deliver exceptional results
           </p>
         </div>
+      </div>
 
-        {/* Services - Modern Card Layout with Animated Illustrations */}
-        <div className="space-y-24">
-          {services.map((service, index) => {
-            const AnimationComponent = service.animation
-            const isEven = index % 2 === 0
+      {/* Services - Each with Different Background */}
+      {services.map((service, index) => {
+        const AnimationComponent = service.animation
+        const isEven = index % 2 === 0
 
-            return (
-              <div
-                key={index}
-                className={`service-item-${index} group`}
-              >
-                {/* Card with subtle background */}
-                <div className={`relative p-8 lg:p-12 rounded-3xl bg-white/40 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:bg-white/60`}>
-                  <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ${
-                    isEven ? '' : 'lg:flex-row-reverse'
+        return (
+          <div
+            key={index}
+            className={`service-item-${index} ${service.bgColor} py-20 lg:py-24`}
+          >
+            <div className="container mx-auto px-6 lg:px-12">
+              <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ${
+                isEven ? '' : 'lg:flex-row-reverse'
+              }`}>
+                {/* Content Side */}
+                <div className="service-content flex-1 text-center lg:text-left">
+                  <h3 className={`text-4xl lg:text-5xl font-black mb-6 ${
+                    theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
                   }`}>
-                    {/* Animated Illustration Side */}
-                    <div className="flex-shrink-0">
-                      <div className={`service-icon relative w-48 h-48 lg:w-56 lg:h-56 rounded-3xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105 p-6`}>
-                        <div className="w-full h-full">
-                          <AnimationComponent />
-                        </div>
+                    {service.title}
+                  </h3>
+                  <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl">
+                    {service.desc}
+                  </p>
+                  <button className={`inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 ${service.borderColor} ${service.textColor} font-bold ${service.hoverBg} hover:text-white transition-all duration-300 hover:scale-105 group`}>
+                    Learn More
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                </div>
 
-                        {/* Small number badge - subtle */}
-                        <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center">
-                          <span className={`text-xl font-black ${service.textColor}`}>{index + 1}</span>
-                        </div>
-
-                        {/* Glow effect */}
-                        <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-30 blur-2xl transition-opacity duration-500`} />
-                      </div>
-                    </div>
-
-                    {/* Content Side - Better Alignment */}
-                    <div className={`flex-1 text-center lg:text-left`}>
-                      <h3 className={`text-3xl lg:text-4xl font-black mb-4 ${
-                        theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
-                      }`}>
-                        {service.title}
-                      </h3>
-                      <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 max-w-2xl">
-                        {service.desc}
-                      </p>
-                      <button className={`inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 ${service.borderColor} ${service.textColor} font-bold ${service.hoverBg} hover:text-white transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group/btn`}>
-                        Learn More
-                        <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </button>
-                    </div>
+                {/* Animation Side */}
+                <div className="service-animation flex-1 flex items-center justify-center">
+                  <div className="w-full max-w-md lg:max-w-lg h-80 lg:h-96">
+                    <AnimationComponent />
                   </div>
                 </div>
               </div>
-            )
-          })}
-        </div>
-      </div>
+            </div>
+          </div>
+        )
+      })}
     </section>
   )
 }

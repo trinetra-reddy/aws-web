@@ -17,31 +17,31 @@ export default function AnimatedStats() {
   const stats = [
     {
       key: 'projects',
-      end: 500,
+      end: 50,
       suffix: '+',
-      label: 'Projects Delivered',
-      lottie: 'https://assets2.lottiefiles.com/packages/lf20_touohxv0.json', // Rocket
+      label: 'AI Projects Delivered',
+      lottie: '/assets/animations/rocket.json', // Rocket
     },
     {
       key: 'satisfaction',
       end: 98,
       suffix: '%',
       label: 'Client Satisfaction',
-      lottie: 'https://assets9.lottiefiles.com/packages/lf20_5tl1xxnz.json', // Heart
+      lottie: '/assets/animations/heart.json', // Heart
     },
     {
       key: 'solutions',
-      end: 50,
+      end: 5,
       suffix: '+',
       label: 'AI Solutions Deployed',
-      lottie: 'https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json', // Brain
+      lottie: '/assets/animations/brain.json', // Brain
     },
     {
       key: 'years',
       end: 10,
       suffix: '+',
-      label: 'Years Experience',
-      lottie: 'https://assets10.lottiefiles.com/packages/lf20_myejiggj.json', // Trophy
+      label: 'Years in Development',
+      lottie: '/assets/animations/trophy.json', // Trophy
     },
   ]
 
@@ -50,7 +50,7 @@ export default function AnimatedStats() {
       // Animate stats on scroll
       stats.forEach((stat, index) => {
         const element = `.stat-${index}`
-        
+
         gsap.from(element, {
           scrollTrigger: {
             trigger: element,
@@ -93,17 +93,17 @@ export default function AnimatedStats() {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Title */}
         <div className="text-center mb-20">
-          <h2 className={`text-5xl lg:text-6xl font-black mb-6 ${
+          <h2 className={`stats-title text-5xl lg:text-6xl font-black mb-6 ${
             theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
           }`}>
-            Proven <span className={`bg-gradient-to-r ${
-              theme === 'sunset' 
-                ? 'from-coral-red to-sunset-orange' 
+            AI-Powered <span className={`bg-gradient-to-r ${
+              theme === 'sunset'
+                ? 'from-coral-red to-sunset-orange'
                 : 'from-forest-green to-emerald'
-            } bg-clip-text text-transparent`}>Results</span>
+            } bg-clip-text text-transparent`}>Excellence</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Numbers that speak louder than words
+          <p className="stats-subtitle text-xl text-gray-600 max-w-2xl mx-auto">
+            Building intelligent solutions that transform businesses
           </p>
         </div>
 
@@ -112,11 +112,12 @@ export default function AnimatedStats() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`stat-${index} text-center group`}
+              className={`stat-${index} text-center group cursor-pointer`}
+              style={{ perspective: '1000px' }}
             >
               {/* Lottie Animation */}
               <div className="mb-6 flex justify-center">
-                <div className="w-32 h-32 group-hover:scale-110 transition-transform duration-300">
+                <div className="stat-lottie w-32 h-32 group-hover:scale-125 transition-transform duration-500">
                   <Player
                     autoplay
                     loop
@@ -127,16 +128,16 @@ export default function AnimatedStats() {
               </div>
 
               {/* Number */}
-              <div className={`text-6xl font-black mb-3 bg-gradient-to-r ${
-                theme === 'sunset' 
-                  ? 'from-coral-red to-sunset-orange' 
+              <div className={`stat-number text-6xl font-black mb-3 bg-gradient-to-r ${
+                theme === 'sunset'
+                  ? 'from-coral-red to-sunset-orange'
                   : 'from-forest-green to-emerald'
-              } bg-clip-text text-transparent`}>
+              } bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300`}>
                 {counts[stat.key as keyof typeof counts]}{stat.suffix}
               </div>
 
               {/* Label */}
-              <div className={`text-lg font-semibold ${
+              <div className={`stat-label text-lg font-semibold ${
                 theme === 'sunset' ? 'text-gray-700' : 'text-gray-800'
               }`}>
                 {stat.label}

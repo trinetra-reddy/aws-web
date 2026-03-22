@@ -46,16 +46,16 @@ export default function CTAModern() {
     <section
       ref={sectionRef}
       className={`py-32 ${
-        theme === 'sunset' 
-          ? 'bg-gradient-to-br from-deep-charcoal to-gray-900' 
-          : 'bg-gradient-to-br from-deep-navy to-gray-900'
+        theme === 'sunset'
+          ? 'bg-gradient-to-br from-cream via-soft-peach to-cream'
+          : 'bg-gradient-to-br from-sage via-mint to-sage'
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="cta-content relative max-w-6xl mx-auto">
           <div className={`relative rounded-3xl overflow-hidden ${
-            theme === 'sunset' 
-              ? 'bg-gradient-to-br from-coral-red to-sunset-orange' 
+            theme === 'sunset'
+              ? 'bg-gradient-to-br from-coral-red to-sunset-orange'
               : 'bg-gradient-to-br from-forest-green to-emerald'
           } p-12 lg:p-20 shadow-2xl`}>
             {/* Background Pattern */}
@@ -83,7 +83,9 @@ export default function CTAModern() {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/contact"
-                    className="group px-8 py-4 bg-white text-coral-red font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                    className={`group px-8 py-4 bg-white font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2 hover:scale-105 ${
+                      theme === 'sunset' ? 'text-coral-red' : 'text-forest-green'
+                    }`}
                   >
                     Get Free Consultation
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -119,7 +121,7 @@ export default function CTAModern() {
                   <Player
                     autoplay
                     loop
-                    src="https://assets3.lottiefiles.com/packages/lf20_V9t630.json"
+                    src="/assets/animations/cta-animation.json"
                     style={{ width: '100%', height: '100%' }}
                   />
                 </div>

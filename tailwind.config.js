@@ -10,7 +10,26 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'Ubuntu', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Ubuntu', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'Ubuntu', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+      },
+      fontSize: {
+        // Hero sizes (responsive)
+        'hero': ['72px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'hero-tablet': ['48px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'hero-mobile': ['36px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
+        // Section headings
+        'section': ['48px', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'section-tablet': ['36px', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'section-mobile': ['28px', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '700' }],
+        // Subsection headings
+        'subsection': ['36px', { lineHeight: '1.3', fontWeight: '600' }],
+        'subsection-tablet': ['28px', { lineHeight: '1.3', fontWeight: '600' }],
+        'subsection-mobile': ['24px', { lineHeight: '1.3', fontWeight: '600' }],
+        // Body text
+        'body-lg': ['20px', { lineHeight: '1.6' }],
+        'body': ['16px', { lineHeight: '1.7' }],
+        'body-sm': ['14px', { lineHeight: '1.6' }],
       },
       colors: {
         // Theme 1: "Sunset Coral" - Warm, Energetic, Modern
@@ -72,6 +91,7 @@ module.exports = {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
         'soft-xl': '0 20px 60px -15px rgba(0, 0, 0, 0.15)',
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
         'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
         'glow-coral': '0 0 40px rgba(255, 107, 107, 0.4)',
         'glow-sunset': '0 0 40px rgba(255, 160, 122, 0.4)',
@@ -132,11 +152,6 @@ module.exports = {
         'gradient-coral': 'linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%)',
         'gradient-dark': 'linear-gradient(135deg, #2D3142 0%, #1a1f2e 100%)',
         'gradient-soft': 'linear-gradient(135deg, #FAF3E0 0%, #FFE5D9 50%, #FFF4E6 100%)',
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       spacing: {
         '18': '4.5rem',

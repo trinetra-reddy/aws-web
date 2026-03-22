@@ -21,50 +21,101 @@ export default function HeroModern() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Headline animation - split reveal
+      // Enhanced Headline animation - split reveal with 3D effect
       if (headlineRef.current) {
         const words = headlineRef.current.querySelectorAll('.word')
-        gsap.from(words, {
-          y: 100,
+
+        // Create a timeline for coordinated animations
+        const headlineTimeline = gsap.timeline()
+
+        headlineTimeline.from(words, {
+          y: 150,
           opacity: 0,
           rotateX: -90,
-          stagger: 0.1,
-          duration: 1,
+          rotateY: 20,
+          scale: 0.5,
+          stagger: {
+            each: 0.12,
+            ease: 'power2.out'
+          },
+          duration: 1.2,
           ease: 'power4.out',
+          transformOrigin: 'center bottom',
+        })
+
+        // Add subtle bounce to each word after reveal
+        words.forEach((word, index) => {
+          gsap.to(word, {
+            y: -10,
+            duration: 0.6,
+            delay: 1.5 + (index * 0.1),
+            ease: 'power2.out',
+            yoyo: true,
+            repeat: 1,
+          })
         })
       }
 
-      // Subline fade in
-      gsap.from(sublineRef.current, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        delay: 0.5,
-        ease: 'power3.out',
-      })
+      // Enhanced Subline with character reveal
+      if (sublineRef.current) {
+        gsap.from(sublineRef.current, {
+          y: 80,
+          opacity: 0,
+          duration: 1.2,
+          delay: 0.6,
+          ease: 'power3.out',
+        })
 
-      // CTA buttons
-      gsap.from(ctaRef.current?.children || [], {
-        y: 30,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.8,
-        delay: 0.8,
-        ease: 'back.out(1.7)',
-      })
+        // Add subtle scale animation
+        gsap.from(sublineRef.current, {
+          scale: 0.95,
+          duration: 1,
+          delay: 0.7,
+          ease: 'back.out(1.5)',
+        })
+      }
 
-      // Image reveal with parallax
+      // Enhanced CTA buttons with magnetic effect
+      if (ctaRef.current) {
+        const buttons = ctaRef.current.children
+
+        gsap.from(buttons, {
+          y: 50,
+          opacity: 0,
+          scale: 0.8,
+          stagger: 0.15,
+          duration: 1,
+          delay: 1,
+          ease: 'elastic.out(1, 0.5)',
+        })
+
+        // Add floating animation to buttons
+        Array.from(buttons).forEach((button, index) => {
+          gsap.to(button, {
+            y: -5,
+            duration: 2,
+            delay: 2 + (index * 0.2),
+            ease: 'sine.inOut',
+            yoyo: true,
+            repeat: -1,
+          })
+        })
+      }
+
+      // Enhanced Image reveal with rotation and scale
       gsap.from(imageRef.current, {
-        scale: 0.8,
+        scale: 0.6,
         opacity: 0,
-        duration: 1.2,
-        delay: 0.3,
-        ease: 'power3.out',
+        rotation: -10,
+        duration: 1.5,
+        delay: 0.4,
+        ease: 'power4.out',
       })
 
-      // Parallax scroll effect
+      // Parallax scroll effect with rotation
       gsap.to(imageRef.current, {
         y: 100,
+        rotation: 5,
         scrollTrigger: {
           trigger: heroRef.current,
           start: 'top top',
@@ -113,27 +164,43 @@ export default function HeroModern() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Content */}
           <div className="space-y-8">
+            {/* AI Badge */}
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${
+              theme === 'sunset'
+                ? 'bg-coral-red/10 border border-coral-red/30'
+                : 'bg-forest-green/10 border border-forest-green/30'
+            } backdrop-blur-sm mb-4`}>
+              <div className={`w-2 h-2 rounded-full ${
+                theme === 'sunset' ? 'bg-coral-red' : 'bg-forest-green'
+              } animate-pulse`} />
+              <span className={`text-sm font-bold ${
+                theme === 'sunset' ? 'text-coral-red' : 'text-forest-green'
+              }`}>
+                AI-Powered Solutions
+              </span>
+            </div>
+
             {/* Headline with word-by-word reveal */}
             <h1
               ref={headlineRef}
-              className={`text-6xl lg:text-7xl xl:text-8xl font-black leading-tight ${
+              className={`text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${
                 theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
               }`}
               style={{ perspective: '1000px' }}
             >
-              <span className="word inline-block mr-4">Build</span>
-              <span className="word inline-block mr-4">The</span>
+              <span className="word inline-block mr-4">Transform</span>
+              <span className="word inline-block mr-4">Your</span>
+              <br />
+              <span className="word inline-block mr-4">Business</span>
+              <span className="word inline-block mr-4">With</span>
               <br />
               <span className={`word inline-block mr-4 bg-gradient-to-r ${
                 theme === 'sunset'
-                  ? 'from-coral-red to-sunset-orange'
-                  : 'from-forest-green to-emerald'
+                  ? 'from-coral-red via-sunset-orange to-golden-yellow'
+                  : 'from-forest-green via-emerald to-amber'
               } bg-clip-text text-transparent`}>
-                Future
+                AI Intelligence
               </span>
-              <br />
-              <span className="word inline-block mr-4">With</span>
-              <span className="word inline-block">Us</span>
             </h1>
 
             {/* Subline */}
@@ -141,8 +208,8 @@ export default function HeroModern() {
               ref={sublineRef}
               className="text-xl lg:text-2xl text-gray-700 max-w-xl leading-relaxed"
             >
-              We transform businesses through innovative technology solutions. 
-              From AI automation to custom software, we're your partner in digital excellence.
+              We build intelligent systems powered by <strong>machine learning and AI</strong> that drive growth,
+              reduce costs, and create competitive advantages through automation and predictive analytics.
             </p>
 
             {/* CTAs */}
@@ -155,7 +222,7 @@ export default function HeroModern() {
                     : 'from-forest-green to-emerald hover:shadow-glow-green'
                 } text-white font-bold rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 hover:scale-105`}
               >
-                Start Your Project
+                Explore AI Solutions
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -167,46 +234,24 @@ export default function HeroModern() {
                 } font-bold rounded-full hover:text-white transition-all duration-300 flex items-center gap-2`}
               >
                 <Play className="w-5 h-5" />
-                Watch Demo
+                See AI in Action
               </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-gray-300">
-              <div>
-                <div className={`text-4xl font-black ${
-                  theme === 'sunset' ? 'text-coral-red' : 'text-forest-green'
-                }`}>500+</div>
-                <div className="text-sm text-gray-600 font-medium">Projects Delivered</div>
-              </div>
-              <div>
-                <div className={`text-4xl font-black ${
-                  theme === 'sunset' ? 'text-sunset-orange' : 'text-emerald'
-                }`}>98%</div>
-                <div className="text-sm text-gray-600 font-medium">Client Satisfaction</div>
-              </div>
-              <div>
-                <div className={`text-4xl font-black ${
-                  theme === 'sunset' ? 'text-golden-yellow' : 'text-amber'
-                }`}>10+</div>
-                <div className="text-sm text-gray-600 font-medium">Years Experience</div>
-              </div>
             </div>
           </div>
 
-          {/* Right: Lottie Animation - SIGNIFICANTLY INCREASED SIZE */}
+          {/* Right: AI-Focused Lottie Animation */}
           <div ref={imageRef} className="relative lg:-mr-20 xl:-mr-32">
             {/* Glow effect behind animation */}
             <div className={`absolute inset-0 rounded-full blur-3xl opacity-30 ${
               theme === 'sunset' ? 'bg-coral-red' : 'bg-forest-green'
             }`} />
 
-            {/* Animation Container - MUCH LARGER - Almost Full Width */}
+            {/* Animation Container - AI Development/Coding Animation */}
             <div className="relative w-full mx-auto" style={{ maxWidth: '800px' }}>
               <Player
                 autoplay
                 loop
-                src="https://assets9.lottiefiles.com/packages/lf20_w51pcehl.json"
+                src="/assets/animations/ai-coding.json"
                 style={{ width: '100%', height: '100%', minHeight: '600px' }}
               />
             </div>

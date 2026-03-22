@@ -51,8 +51,15 @@ export default function HeaderModern() {
                 height={70}
                 priority
                 className={`h-12 w-auto transition-all duration-300 ${
-                  isScrolled ? 'brightness-0' : 'brightness-100 drop-shadow-lg'
+                  isScrolled
+                    ? 'brightness-0'
+                    : 'drop-shadow-lg'
                 }`}
+                style={{
+                  filter: isScrolled
+                    ? undefined
+                    : 'brightness(0) saturate(100%) invert(28%) sepia(28%) saturate(1234%) hue-rotate(115deg) brightness(95%) contrast(92%)'
+                }}
               />
             </div>
           </Link>
