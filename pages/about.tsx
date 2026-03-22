@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { User, Target, Users, Zap, Award, Globe, TrendingUp } from 'lucide-react'
 import { Player } from '@lottiefiles/react-lottie-player'
 import Head from 'next/head'
+import SEO, { organizationSchema } from '../components/SEO'
+import GEO from '../components/GEO'
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -18,10 +20,20 @@ const fadeInVariants = {
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About Us | Anantha Web Solutions</title>
-        <meta name="description" content="Learn about Anantha Web Solutions - transforming businesses through innovative digital solutions with global presence." />
-      </Head>
+      <SEO
+        title="About Us - Anantha Web Solutions"
+        description="Learn about Anantha Web Solutions - a leading web and mobile development company with global presence in India, Canada, and USA. 500+ projects delivered, 98% client satisfaction."
+        keywords="about anantha web solutions, web development company, mobile app development, global offices, India, Canada, USA"
+        canonical="https://ananthawebsolutions.com/about"
+        structuredData={organizationSchema}
+      />
+
+      <GEO
+        title="About Anantha Web Solutions"
+        description="Leading web and mobile development company with offices in India, Canada, and USA. 500+ projects delivered with 98% client satisfaction."
+        expertise={['Web Development', 'Mobile Development', 'E-commerce', 'UI/UX Design', 'Cloud Services', 'DevOps']}
+        sources={['https://ananthawebsolutions.com/about']}
+      />
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-900 px-6 pt-20 pb-20">
         <div className="container mx-auto space-y-24 pt-20">

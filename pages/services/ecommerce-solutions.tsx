@@ -3,8 +3,22 @@ import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ShoppingCart, Zap, Shield, CreditCard, Globe, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react'
+import SEO from '../../components/SEO'
+import GEO, { generateServiceSchema, generateBreadcrumbSchema } from '../../components/GEO'
 
 export default function EcommerceSolutions() {
+  const serviceSchema = generateServiceSchema(
+    'E-commerce Solutions',
+    'Complete e-commerce platforms with payment integration, inventory management, and analytics. Custom online stores built with Shopify, WooCommerce, and Magento.',
+    'Anantha Web Solutions',
+    'https://ananthawebsolutions.com/services/ecommerce-solutions'
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://ananthawebsolutions.com' },
+    { name: 'Services', url: 'https://ananthawebsolutions.com/services' },
+    { name: 'E-commerce Solutions', url: 'https://ananthawebsolutions.com/services/ecommerce-solutions' }
+  ])
   const features = [
     { icon: ShoppingCart, title: 'Custom Online Stores', description: 'Tailored e-commerce platforms built to match your brand and business needs' },
     { icon: CreditCard, title: 'Payment Integration', description: 'Secure payment gateways supporting multiple payment methods and currencies' },

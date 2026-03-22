@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle, CheckCircle, Building2 } from 'lucide-react'
 import Head from 'next/head'
+import SEO, { localBusinessSchema } from '../components/SEO'
+import GEO from '../components/GEO'
+import GeoPersonalization from '../components/GeoPersonalization'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -76,9 +79,30 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact Us - Anantha Web Solutions"
+        description="Get in touch with Anantha Web Solutions. Global offices in India, Canada, and USA. Contact us at +91-7013594249 or account@ananthawebsolutions.com"
+        keywords="contact anantha web solutions, web development company contact, India office, Canada office, USA office"
+        canonical="https://ananthawebsolutions.com/contact"
+        structuredData={localBusinessSchema('india')}
+      />
+
+      <GEO
+        title="Contact Anantha Web Solutions"
+        description="Contact us for web development, mobile apps, and digital solutions. Offices in India, Canada, and USA. Phone: +91-7013594249"
+        expertise={['Web Development', 'Mobile Development', 'E-commerce', 'Cloud Services']}
+        sources={['https://ananthawebsolutions.com/contact']}
+      />
+
       <Head>
-        <title>Contact Us | Anantha Web Solutions</title>
-        <meta name="description" content="Get in touch with Anantha Web Solutions. We're here to help with your digital transformation needs." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema('canada')) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema('usa')) }}
+        />
       </Head>
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 pt-20">
@@ -108,6 +132,13 @@ export default function Contact() {
                 Have a project in mind? We'd love to hear about it. Get in touch and let's build something amazing together.
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Geo Personalization */}
+        <section className="py-8">
+          <div className="container mx-auto px-6 lg:px-12">
+            <GeoPersonalization />
           </div>
         </section>
 

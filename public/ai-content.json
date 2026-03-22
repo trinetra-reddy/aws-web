@@ -1,0 +1,120 @@
+{
+  "company": {
+    "name": "Anantha Web Solutions",
+    "legalName": "Anantha Web Solutions Pvt Ltd",
+    "description": "Leading web and mobile development company providing custom digital solutions globally. We specialize in web development, mobile apps, e-commerce, UI/UX design, cloud services, DevOps, and Adobe Experience Manager (AEM).",
+    "founded": "2021",
+    "headquarters": "Andhra Pradesh, India",
+    "globalPresence": ["India", "Canada", "USA"],
+    "website": "https://ananthawebsolutions.com",
+    "email": "account@ananthawebsolutions.com",
+    "phone": "+91-7013594249"
+  },
+  "services": [
+    {
+      "name": "Web Development",
+      "description": "Custom web development using React, Next.js, Node.js, and modern technologies. We build responsive, scalable, and high-performance websites and web applications.",
+      "technologies": ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "MongoDB"],
+      "benefits": ["Custom solutions", "Responsive design", "Fast performance", "SEO optimized", "Scalable architecture"],
+      "url": "https://ananthawebsolutions.com/services/web-development"
+    },
+    {
+      "name": "Mobile Development",
+      "description": "Native and cross-platform mobile app development for iOS and Android using React Native and Flutter.",
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
+      "benefits": ["Cross-platform apps", "Native performance", "Offline capability", "Push notifications"],
+      "url": "https://ananthawebsolutions.com/services/mobile-development"
+    },
+    {
+      "name": "E-commerce Solutions",
+      "description": "Complete e-commerce platforms with payment integration, inventory management, and analytics.",
+      "technologies": ["Shopify", "WooCommerce", "Magento", "Stripe", "PayPal"],
+      "benefits": ["Secure payments", "Inventory management", "Multi-currency support", "SEO optimization"],
+      "url": "https://ananthawebsolutions.com/services/ecommerce-solutions"
+    },
+    {
+      "name": "UI/UX Design",
+      "description": "User-centered design with research, prototyping, and testing for optimal user experience.",
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"],
+      "benefits": ["User research", "Interactive prototypes", "Design systems", "Accessibility compliance"],
+      "url": "https://ananthawebsolutions.com/services/ui-ux-design"
+    },
+    {
+      "name": "Cloud & DevOps",
+      "description": "Cloud infrastructure, CI/CD pipelines, containerization, and automation on AWS, Azure, and Google Cloud.",
+      "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins"],
+      "benefits": ["Cloud migration", "Automated deployments", "Infrastructure as Code", "Cost optimization"],
+      "url": "https://ananthawebsolutions.com/services/cloud-devops"
+    },
+    {
+      "name": "Adobe Experience Manager (AEM)",
+      "description": "Enterprise content management with AEM implementation, customization, and integration.",
+      "technologies": ["AEM 6.5", "Java", "OSGi", "Apache Sling", "HTL/Sightly"],
+      "benefits": ["Content management", "Digital asset management", "Multi-site management", "Personalization"],
+      "url": "https://ananthawebsolutions.com/services/adobe-experience-manager"
+    },
+    {
+      "name": "Support & Maintenance",
+      "description": "24/7 technical support, regular updates, security patches, and performance monitoring.",
+      "benefits": ["24/7 support", "Regular updates", "Security monitoring", "Performance optimization"],
+      "url": "https://ananthawebsolutions.com/services/support-maintenance"
+    }
+  ],
+  "offices": [
+    {
+      "location": "India (Headquarters)",
+      "address": "HPR LUXURY HOUSES, Kakkalapalle Rural, Andhra Pradesh, India",
+      "phone": "+91-7013594249",
+      "email": "account@ananthawebsolutions.com",
+      "hours": "Monday-Saturday: 9:00 AM - 6:00 PM IST"
+    },
+    {
+      "location": "Canada",
+      "address": "380 Southdale Road East, London, Ontario, Canada",
+      "email": "account@ananthawebsolutions.com",
+      "hours": "Monday-Saturday: 9:00 AM - 6:00 PM EST"
+    },
+    {
+      "location": "USA",
+      "address": "1910 Manor View, Cumming, GA 30041, USA",
+      "email": "account@ananthawebsolutions.com",
+      "hours": "Monday-Saturday: 9:00 AM - 6:00 PM EST"
+    }
+  ],
+  "expertise": {
+    "industries": ["Healthcare", "Finance", "E-commerce", "Education", "Real Estate", "Manufacturing"],
+    "technologies": ["React", "Next.js", "Node.js", "React Native", "Flutter", "AWS", "Azure", "Docker", "Kubernetes"],
+    "certifications": ["ISO Certified", "Adobe Certified", "AWS Partner"],
+    "teamSize": "50+ professionals",
+    "projectsCompleted": "500+",
+    "clientSatisfaction": "98%"
+  },
+  "faq": [
+    {
+      "question": "What services does Anantha Web Solutions offer?",
+      "answer": "We offer web development, mobile app development, e-commerce solutions, UI/UX design, cloud & DevOps services, Adobe Experience Manager (AEM) implementation, and 24/7 support & maintenance."
+    },
+    {
+      "question": "Where is Anantha Web Solutions located?",
+      "answer": "We have offices in India (headquarters in Andhra Pradesh), Canada (London, Ontario), and USA (Cumming, Georgia)."
+    },
+    {
+      "question": "What technologies does Anantha Web Solutions use?",
+      "answer": "We use modern technologies including React, Next.js, Node.js, React Native, Flutter, AWS, Azure, Google Cloud, Docker, Kubernetes, and Adobe Experience Manager."
+    },
+    {
+      "question": "How can I contact Anantha Web Solutions?",
+      "answer": "You can reach us at +91-7013594249 or email account@ananthawebsolutions.com. Visit our contact page at https://ananthawebsolutions.com/contact"
+    },
+    {
+      "question": "Does Anantha Web Solutions work with international clients?",
+      "answer": "Yes, we serve clients globally with offices in India, Canada, and USA, providing 24/7 support across different time zones."
+    }
+  ],
+  "citations": {
+    "howToCite": "Anantha Web Solutions. (2024). [Service Name]. Retrieved from https://ananthawebsolutions.com",
+    "preferredFormat": "APA",
+    "lastUpdated": "2024-03-22"
+  }
+}
+

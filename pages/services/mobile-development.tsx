@@ -3,8 +3,22 @@ import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Smartphone, Zap, Shield, Users, Globe, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react'
+import SEO from '../../components/SEO'
+import GEO, { generateServiceSchema, generateBreadcrumbSchema } from '../../components/GEO'
 
 export default function MobileDevelopment() {
+  const serviceSchema = generateServiceSchema(
+    'Mobile App Development',
+    'Native and cross-platform mobile app development for iOS and Android using React Native and Flutter. High-performance apps with seamless functionality.',
+    'Anantha Web Solutions',
+    'https://ananthawebsolutions.com/services/mobile-development'
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://ananthawebsolutions.com' },
+    { name: 'Services', url: 'https://ananthawebsolutions.com/services' },
+    { name: 'Mobile Development', url: 'https://ananthawebsolutions.com/services/mobile-development' }
+  ])
   const features = [
     { icon: Smartphone, title: 'Cross-Platform Apps', description: 'Build once, deploy everywhere - iOS, Android, and web from a single codebase' },
     { icon: Zap, title: 'Native Performance', description: 'Lightning-fast apps with native-like performance and smooth animations' },
@@ -49,10 +63,26 @@ export default function MobileDevelopment() {
 
   return (
     <>
+      <SEO
+        title="Mobile App Development Services"
+        description="Professional mobile app development for iOS and Android. Cross-platform solutions with React Native and Flutter. Native performance with seamless functionality."
+        keywords="mobile app development, iOS, Android, React Native, Flutter, cross-platform apps, native apps, mobile solutions"
+        canonical="https://ananthawebsolutions.com/services/mobile-development"
+        structuredData={serviceSchema}
+      />
+
+      <GEO
+        title="Mobile App Development - Anantha Web Solutions"
+        description="Native and cross-platform mobile app development for iOS and Android using React Native and Flutter."
+        expertise={['Mobile Development', 'React Native', 'Flutter', 'iOS', 'Android', 'Cross-platform Apps']}
+        sources={['https://ananthawebsolutions.com/services/mobile-development']}
+      />
+
       <Head>
-        <title>Mobile App Development Services | Anantha Web Solutions</title>
-        <meta name="description" content="Professional mobile app development for iOS and Android. Cross-platform solutions with React Native and Flutter." />
-        <meta name="keywords" content="mobile app development, iOS, Android, React Native, Flutter, cross-platform apps" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">

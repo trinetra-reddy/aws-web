@@ -3,8 +3,22 @@ import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Code, Zap, Shield, Smartphone, Globe, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react'
+import SEO from '../../components/SEO'
+import GEO, { generateServiceSchema, generateBreadcrumbSchema } from '../../components/GEO'
 
 export default function WebDevelopment() {
+  const serviceSchema = generateServiceSchema(
+    'Web Development',
+    'Custom web development using React, Next.js, Node.js, and modern technologies. We build responsive, scalable, and high-performance websites and web applications.',
+    'Anantha Web Solutions',
+    'https://ananthawebsolutions.com/services/web-development'
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://ananthawebsolutions.com' },
+    { name: 'Services', url: 'https://ananthawebsolutions.com/services' },
+    { name: 'Web Development', url: 'https://ananthawebsolutions.com/services/web-development' }
+  ])
   const features = [
     { icon: Code, title: 'Custom Development', description: 'Tailored solutions built from scratch to meet your unique business requirements' },
     { icon: Zap, title: 'High Performance', description: 'Lightning-fast websites optimized for speed and user experience' },
@@ -49,10 +63,26 @@ export default function WebDevelopment() {
 
   return (
     <>
+      <SEO
+        title="Web Development Services"
+        description="Professional web development services. Custom websites built with React, Next.js, Node.js, and modern technologies. Responsive, scalable, and SEO-optimized solutions."
+        keywords="web development, React, Next.js, Node.js, custom websites, responsive design, web applications, TypeScript, Tailwind CSS"
+        canonical="https://ananthawebsolutions.com/services/web-development"
+        structuredData={serviceSchema}
+      />
+
+      <GEO
+        title="Web Development Services - Anantha Web Solutions"
+        description="Custom web development using React, Next.js, and Node.js. We build responsive, scalable, high-performance websites and web applications."
+        expertise={['Web Development', 'React', 'Next.js', 'Node.js', 'TypeScript', 'Responsive Design']}
+        sources={['https://ananthawebsolutions.com/services/web-development']}
+      />
+
       <Head>
-        <title>Web Development Services | Anantha Web Solutions</title>
-        <meta name="description" content="Professional web development services. Custom websites built with React, Next.js, and modern technologies." />
-        <meta name="keywords" content="web development, React, Next.js, custom websites, responsive design" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">

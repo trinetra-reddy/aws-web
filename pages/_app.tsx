@@ -3,10 +3,14 @@ import Head from 'next/head';
 import '../styles/globals.css';
 import Layout from '../components/Layout';
 import { ThemeProvider } from '../context/ThemeContext';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
+      {/* Google Analytics */}
+      <GoogleAnalytics />
+
       <Head>
         <title>Anantha Web Solutions</title>
         <meta

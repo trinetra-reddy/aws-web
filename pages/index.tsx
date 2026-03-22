@@ -10,47 +10,83 @@ import AnimatedStats from '../components/AnimatedStats'
 import TestimonialsModern from '../components/TestimonialsModern'
 import CTAModern from '../components/CTAModern'
 import FooterModern from '../components/FooterModern'
+import GEO, { generateFAQSchema } from '../components/GEO'
+import { organizationSchema } from '../components/SEO'
 
 export default function Home() {
+  // FAQ data for AI engines
+  const faqs = [
+    {
+      question: "What services does Anantha Web Solutions offer?",
+      answer: "Anantha Web Solutions offers web development, mobile app development, e-commerce solutions, UI/UX design, cloud & DevOps services, Adobe Experience Manager (AEM) implementation, and 24/7 support & maintenance services."
+    },
+    {
+      question: "Where is Anantha Web Solutions located?",
+      answer: "Anantha Web Solutions has offices in three countries: India (headquarters in Andhra Pradesh), Canada (London, Ontario), and USA (Cumming, Georgia)."
+    },
+    {
+      question: "What technologies does Anantha Web Solutions use?",
+      answer: "We use modern technologies including React, Next.js, Node.js, TypeScript, React Native, Flutter, AWS, Azure, Google Cloud, Docker, Kubernetes, and Adobe Experience Manager."
+    },
+    {
+      question: "How can I contact Anantha Web Solutions?",
+      answer: "You can contact us at +91-7013594249, email account@ananthawebsolutions.com, or visit our contact page at https://ananthawebsolutions.com/contact"
+    }
+  ]
+
   return (
     <>
       <Head>
-        <title>Anantha Web Solutions | AI-Powered Business Transformation</title>
-        <meta name="description" content="Transform your business with AI-powered solutions. Expert AI consulting, custom software development, and intelligent automation. 500+ projects delivered, 98% client satisfaction." />
-        <meta name="keywords" content="AI consulting, AI automation, machine learning, custom software development, web development, mobile apps, AI solutions, business transformation, digital transformation" />
+        <title>Anantha Web Solutions | Custom Web & Mobile Development Services</title>
+        <meta name="description" content="Leading web and mobile development company. Custom websites, mobile apps, e-commerce, UI/UX design, cloud services. 500+ projects, 98% satisfaction. Global offices in India, Canada, USA." />
+        <meta name="keywords" content="web development, mobile app development, e-commerce solutions, UI/UX design, cloud services, DevOps, Adobe Experience Manager, AEM, React, Next.js, custom software development" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Anantha Web Solutions | AI-Powered Business Transformation" />
-        <meta property="og:description" content="We build intelligent systems that drive growth, reduce costs, and create competitive advantages. From AI automation to custom software." />
-        <meta property="og:image" content="https://ananthawebsolutions.com/assets/og-image.jpg" />
+        <meta property="og:title" content="Anantha Web Solutions | Custom Web & Mobile Development" />
+        <meta property="og:description" content="Transform your business with custom web and mobile solutions. Expert team delivering innovative digital solutions globally." />
+        <meta property="og:image" content="https://ananthawebsolutions.com/assets/logos/ananthaweb.png" />
         <meta property="og:url" content="https://ananthawebsolutions.com/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Anantha Web Solutions | AI-Powered Business Transformation" />
-        <meta name="twitter:description" content="Transform your business with AI-powered solutions and intelligent automation." />
-        <meta name="twitter:image" content="https://ananthawebsolutions.com/assets/og-image.jpg" />
 
-        {/* Structured Data */}
+        {/* Structured Data for AI */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Anantha Web Solutions Pvt Ltd",
-              "url": "https://ananthadigital.com",
-              "logo": "https://ananthadigital.com/assets/logo.webp",
-              "sameAs": [
-                "https://www.linkedin.com/company/ananthaweb",
-                "https://twitter.com/ananthaweb"
-              ],
-              "description": "We build custom web, mobile, and AI-powered platforms for startups and enterprises."
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }}
+        />
+        <meta name="twitter:title" content="Anantha Web Solutions | Custom Web & Mobile Development" />
+        <meta name="twitter:description" content="Transform your business with custom web and mobile solutions." />
+        <meta name="twitter:image" content="https://ananthawebsolutions.com/assets/logos/ananthaweb.png" />
       </Head>
+
+      {/* GEO Component for AI Optimization */}
+      <GEO
+        title="Anantha Web Solutions - Web & Mobile Development Company"
+        description="Leading web and mobile development company providing custom digital solutions globally. Services include web development, mobile apps, e-commerce, UI/UX design, cloud services, and Adobe Experience Manager."
+        keywords="web development, mobile app development, e-commerce, UI/UX design, cloud services, DevOps, AEM"
+        expertise={[
+          "Web Development",
+          "Mobile App Development",
+          "E-commerce Solutions",
+          "UI/UX Design",
+          "Cloud & DevOps",
+          "Adobe Experience Manager"
+        ]}
+        sources={[
+          "https://ananthawebsolutions.com",
+          "https://ananthawebsolutions.com/services",
+          "https://ananthawebsolutions.com/about"
+        ]}
+        citations={[
+          "Anantha Web Solutions. (2024). Company Overview. Retrieved from https://ananthawebsolutions.com"
+        ]}
+      />
 
       {/* Theme Switcher */}
       <ThemeSwitcher />
