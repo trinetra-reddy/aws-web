@@ -227,7 +227,9 @@ export default function HorizontalScrollProjects() {
                   }`}>
                     {project.title}
                   </h3>
-                  <p className={`text-sm font-bold bg-gradient-to-r ${project.borderGradient} bg-clip-text text-transparent mb-4`}>
+                  <p className={`text-sm font-bold mb-4 ${
+                    theme === 'sunset' ? 'text-slate-700' : 'text-slate-800'
+                  }`}>
                     {project.subtitle}
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed font-medium">
@@ -236,9 +238,11 @@ export default function HorizontalScrollProjects() {
                 </div>
 
                 {/* Bottom */}
-                <div className={`flex items-center gap-2 font-bold group-hover:gap-4 transition-all mt-6 bg-gradient-to-r ${project.borderGradient} bg-clip-text text-transparent`}>
+                <div className={`flex items-center gap-2 font-bold group-hover:gap-4 transition-all mt-6 ${
+                  theme === 'sunset' ? 'text-slate-900' : 'text-slate-900'
+                }`}>
                   <span>View Project</span>
-                  <ExternalLink className="w-5 h-5 text-gray-700 group-hover:text-gray-900 transition-colors" />
+                  <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </div>
 
                 {/* Animated shine effect on hover */}

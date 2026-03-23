@@ -9,7 +9,6 @@ import HorizontalScrollProjects from '../components/HorizontalScrollProjects'
 import AnimatedStats from '../components/AnimatedStats'
 import TestimonialsModern from '../components/TestimonialsModern'
 import CTAModern from '../components/CTAModern'
-import FooterModern from '../components/FooterModern'
 import GEO, { generateFAQSchema } from '../components/GEO'
 import { organizationSchema } from '../components/SEO'
 
@@ -105,9 +104,6 @@ export default function Home() {
 
       {/* CTA Section with Lottie */}
       <CTAModern />
-
-      {/* Modern Footer */}
-      <FooterModern />
     </>
   )
 }

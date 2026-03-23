@@ -359,12 +359,14 @@ export default function Contact() {
                 </div>
 
                 {/* Map */}
-                <div id="map" className="rounded-2xl overflow-hidden shadow-xl border-2 border-slate-100 h-[350px] mt-6">
+                <div id="map" className="rounded-2xl overflow-hidden shadow-xl border-2 border-slate-100 h-[450px] mt-6">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d23119.360940874747!2d77.5504773!3d14.6600224!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bb13500291975ab%3A0x5034d51a4bc7bdb1!2sTrinethra%20Reddy%E2%80%99s%20bungalow%2C%20MH36%2BMJ7%2C%20Alamur%20Road%2C%20Alamur%2C%20Kakkalapalle%20Rural%2C%20Kakkalapalle%2C%20Andhra%20Pradesh%20515002!3m2!1d14.654164!2d77.56155799999999!5e1!3m2!1sen!2sin!4v1770054242091!5m2!1sen!2sin"
-                    loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4629.021345863752!2d77.5589603757822!3d14.65419147576093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb13500291975ab%3A0x5034d51a4bc7bdb1!2sTrinethra%20Reddy%E2%80%99s%20bungalow!5e1!3m2!1sen!2sin!4v1774280677757!5m2!1sen!2sin"
+                    style={{ border: 0 }}
                     allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
               </motion.div>
