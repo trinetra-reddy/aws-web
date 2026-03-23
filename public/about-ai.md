@@ -58,7 +58,8 @@ Anantha Web Solutions is a leading web and mobile development company providing 
 - **Hours**: Monday-Saturday, 9:00 AM - 6:00 PM EST
 
 ### USA Office
-- **Location**: 1910 Manor View, Cumming, GA 30041, USA
+- **Location**: 6115 Abbotts Bridge Rd Apt 1716, Johns Creek, GA 30097-5760, USA
+- **Phone**: +1-470-225-0022
 - **Email**: account@ananthawebsolutions.com
 - **Hours**: Monday-Saturday, 9:00 AM - 6:00 PM EST
 

@@ -93,8 +93,8 @@ const offices = {
   usa: {
     name: 'USA Office',
     country: 'United States',
-    address: '1910 Manor View, Cumming, GA 30041, USA',
-    phone: '+1 XXX XXX XXXX',
+    address: '6115 Abbotts Bridge Rd Apt 1716, Johns Creek, GA 30097-5760, USA',
+    phone: '+1-470-225-0022',
     email: 'account@ananthawebsolutions.com'
   }
 }

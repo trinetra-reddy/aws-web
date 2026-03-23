@@ -351,8 +351,8 @@ export default function Contact() {
                     <div>
                       <h4 className="text-xl font-bold text-slate-900 mb-2">🇺🇸 USA Office</h4>
                       <p className="text-slate-600 leading-relaxed">
-                        1910 Manor View,<br />
-                        Cumming, GA 30041, USA
+                        6115 Abbotts Bridge Rd Apt 1716,<br />
+                        Johns Creek, GA 30097-5760, USA
                       </p>
                     </div>
                   </div>

@@ -112,10 +112,10 @@ export const organizationSchema = {
     },
     {
       "@type": "PostalAddress",
-      "streetAddress": "1910 Manor View",
-      "addressLocality": "Cumming",
+      "streetAddress": "6115 Abbotts Bridge Rd Apt 1716",
+      "addressLocality": "Johns Creek",
       "addressRegion": "GA",
-      "postalCode": "30041",
+      "postalCode": "30097-5760",
       "addressCountry": "US",
       "name": "USA Office"
     }
@@ -161,14 +161,14 @@ export const localBusinessSchema = (office: 'india' | 'canada' | 'usa') => {
     usa: {
       name: "Anantha Web Solutions - USA",
       address: {
-        streetAddress: "1910 Manor View",
-        addressLocality: "Cumming",
+        streetAddress: "6115 Abbotts Bridge Rd Apt 1716",
+        addressLocality: "Johns Creek",
         addressRegion: "GA",
-        postalCode: "30041",
+        postalCode: "30097-5760",
         addressCountry: "US"
       },
-      telephone: "+1-XXX-XXX-XXXX",
-      geo: { latitude: "34.2073", longitude: "-84.1402" }
+      telephone: "+1-470-225-0022",
+      geo: { latitude: "34.0289", longitude: "-84.1986" }
     }
   }
 

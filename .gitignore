@@ -35,3 +35,5 @@ consumerstudio/dist
 
 # production
 /build
+# Local Netlify folder
+.netlify

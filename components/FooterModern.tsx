@@ -229,8 +229,8 @@ const { theme } = useTheme()
                       <p className={`text-sm leading-relaxed ${
                         theme === 'sunset' ? 'text-deep-charcoal/70' : 'text-deep-navy/70'
                       }`}>
-                        1910 Manor View,<br />
-                        Cumming, GA 30041,<br />
+                        6115 Abbotts Bridge Rd Apt 1716,<br />
+                        Johns Creek, GA 30097-5760,<br />
                         USA
                       </p>
                     </div>
