@@ -31,7 +31,7 @@ export default function Industries() {
           name="description"
           content="We build custom digital solutions for healthcare, logistics, education, e-commerce, hospitality, and more. Explore how we help industries transform."
         />
-        <link rel="canonical" href="https://ananthawebsolutions.com/industries" />
+        <link rel="canonical" href="https://ananthadigital.com/industries" />
       </Head>
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-900" role="main">

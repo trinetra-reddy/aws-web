@@ -3,9 +3,15 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ArrowRight, Sparkles } from 'lucide-react'
-import { Player } from '@lottiefiles/react-lottie-player'
+import dynamic from 'next/dynamic'
 import { useTheme } from '../context/ThemeContext'
 import Link from 'next/link'
+
+// Dynamic import for Lottie Player to avoid SSR issues
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+)
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)

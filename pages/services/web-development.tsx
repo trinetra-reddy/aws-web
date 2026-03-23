@@ -11,13 +11,13 @@ export default function WebDevelopment() {
     'Web Development',
     'Custom web development using React, Next.js, Node.js, and modern technologies. We build responsive, scalable, and high-performance websites and web applications.',
     'Anantha Web Solutions',
-    'https://ananthawebsolutions.com/services/web-development'
+    'https://ananthadigital.com/services/web-development'
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://ananthawebsolutions.com' },
-    { name: 'Services', url: 'https://ananthawebsolutions.com/services' },
-    { name: 'Web Development', url: 'https://ananthawebsolutions.com/services/web-development' }
+    { name: 'Home', url: 'https://ananthadigital.com' },
+    { name: 'Services', url: 'https://ananthadigital.com/services' },
+    { name: 'Web Development', url: 'https://ananthadigital.com/services/web-development' }
   ])
   const features = [
     { icon: Code, title: 'Custom Development', description: 'Tailored solutions built from scratch to meet your unique business requirements' },
@@ -67,7 +67,7 @@ export default function WebDevelopment() {
         title="Web Development Services"
         description="Professional web development services. Custom websites built with React, Next.js, Node.js, and modern technologies. Responsive, scalable, and SEO-optimized solutions."
         keywords="web development, React, Next.js, Node.js, custom websites, responsive design, web applications, TypeScript, Tailwind CSS"
-        canonical="https://ananthawebsolutions.com/services/web-development"
+        canonical="https://ananthadigital.com/services/web-development"
         structuredData={serviceSchema}
       />
 
@@ -75,7 +75,7 @@ export default function WebDevelopment() {
         title="Web Development Services - Anantha Web Solutions"
         description="Custom web development using React, Next.js, and Node.js. We build responsive, scalable, high-performance websites and web applications."
         expertise={['Web Development', 'React', 'Next.js', 'Node.js', 'TypeScript', 'Responsive Design']}
-        sources={['https://ananthawebsolutions.com/services/web-development']}
+        sources={['https://ananthadigital.com/services/web-development']}
       />
 
       <Head>

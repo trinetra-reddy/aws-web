@@ -30,7 +30,7 @@ export default function About() {
         title="About Us - Anantha Web Solutions"
         description="Learn about Anantha Web Solutions - a leading web and mobile development company with global presence in India, Canada, and USA. 500+ projects delivered, 98% client satisfaction."
         keywords="about anantha web solutions, web development company, mobile app development, global offices, India, Canada, USA"
-        canonical="https://ananthawebsolutions.com/about"
+        canonical="https://ananthadigital.com/about"
         structuredData={organizationSchema}
       />
 
@@ -38,7 +38,7 @@ export default function About() {
         title="About Anantha Web Solutions"
         description="Leading web and mobile development company with offices in India, Canada, and USA. 500+ projects delivered with 98% client satisfaction."
         expertise={['Web Development', 'Mobile Development', 'E-commerce', 'UI/UX Design', 'Cloud Services', 'DevOps']}
-        sources={['https://ananthawebsolutions.com/about']}
+        sources={['https://ananthadigital.com/about']}
       />
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-900 px-6 pt-20 pb-20">

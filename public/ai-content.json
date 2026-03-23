@@ -6,7 +6,7 @@
     "founded": "2021",
     "headquarters": "Andhra Pradesh, India",
     "globalPresence": ["India", "Canada", "USA"],
-    "website": "https://ananthawebsolutions.com",
+    "website": "https://ananthadigital.com",
     "email": "account@ananthawebsolutions.com",
     "phone": "+91-7013594249"
   },
@@ -16,48 +16,48 @@
       "description": "Custom web development using React, Next.js, Node.js, and modern technologies. We build responsive, scalable, and high-performance websites and web applications.",
       "technologies": ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "MongoDB"],
       "benefits": ["Custom solutions", "Responsive design", "Fast performance", "SEO optimized", "Scalable architecture"],
-      "url": "https://ananthawebsolutions.com/services/web-development"
+      "url": "https://ananthadigital.com/services/web-development"
     },
     {
       "name": "Mobile Development",
       "description": "Native and cross-platform mobile app development for iOS and Android using React Native and Flutter.",
       "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
       "benefits": ["Cross-platform apps", "Native performance", "Offline capability", "Push notifications"],
-      "url": "https://ananthawebsolutions.com/services/mobile-development"
+      "url": "https://ananthadigital.com/services/mobile-development"
     },
     {
       "name": "E-commerce Solutions",
       "description": "Complete e-commerce platforms with payment integration, inventory management, and analytics.",
       "technologies": ["Shopify", "WooCommerce", "Magento", "Stripe", "PayPal"],
       "benefits": ["Secure payments", "Inventory management", "Multi-currency support", "SEO optimization"],
-      "url": "https://ananthawebsolutions.com/services/ecommerce-solutions"
+      "url": "https://ananthadigital.com/services/ecommerce-solutions"
     },
     {
       "name": "UI/UX Design",
       "description": "User-centered design with research, prototyping, and testing for optimal user experience.",
       "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"],
       "benefits": ["User research", "Interactive prototypes", "Design systems", "Accessibility compliance"],
-      "url": "https://ananthawebsolutions.com/services/ui-ux-design"
+      "url": "https://ananthadigital.com/services/ui-ux-design"
     },
     {
       "name": "Cloud & DevOps",
       "description": "Cloud infrastructure, CI/CD pipelines, containerization, and automation on AWS, Azure, and Google Cloud.",
       "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins"],
       "benefits": ["Cloud migration", "Automated deployments", "Infrastructure as Code", "Cost optimization"],
-      "url": "https://ananthawebsolutions.com/services/cloud-devops"
+      "url": "https://ananthadigital.com/services/cloud-devops"
     },
     {
       "name": "Adobe Experience Manager (AEM)",
       "description": "Enterprise content management with AEM implementation, customization, and integration.",
       "technologies": ["AEM 6.5", "Java", "OSGi", "Apache Sling", "HTL/Sightly"],
       "benefits": ["Content management", "Digital asset management", "Multi-site management", "Personalization"],
-      "url": "https://ananthawebsolutions.com/services/adobe-experience-manager"
+      "url": "https://ananthadigital.com/services/adobe-experience-manager"
     },
     {
       "name": "Support & Maintenance",
       "description": "24/7 technical support, regular updates, security patches, and performance monitoring.",
       "benefits": ["24/7 support", "Regular updates", "Security monitoring", "Performance optimization"],
-      "url": "https://ananthawebsolutions.com/services/support-maintenance"
+      "url": "https://ananthadigital.com/services/support-maintenance"
     }
   ],
   "offices": [
@@ -105,7 +105,7 @@
     },
     {
       "question": "How can I contact Anantha Web Solutions?",
-      "answer": "You can reach us at +91-7013594249 or email account@ananthawebsolutions.com. Visit our contact page at https://ananthawebsolutions.com/contact"
+      "answer": "You can reach us at +91-7013594249 or email account@ananthawebsolutions.com. Visit our contact page at https://ananthadigital.com/contact"
     },
     {
       "question": "Does Anantha Web Solutions work with international clients?",
@@ -113,7 +113,7 @@
     }
   ],
   "citations": {
-    "howToCite": "Anantha Web Solutions. (2024). [Service Name]. Retrieved from https://ananthawebsolutions.com",
+    "howToCite": "Anantha Web Solutions. (2024). [Service Name]. Retrieved from https://ananthadigital.com",
     "preferredFormat": "APA",
     "lastUpdated": "2024-03-22"
   }

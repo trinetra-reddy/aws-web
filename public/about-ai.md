@@ -10,57 +10,57 @@ Anantha Web Solutions is a leading web and mobile development company providing 
 - **Technologies**: React, Next.js, Node.js, TypeScript, Tailwind CSS
 - **Specialization**: Custom websites, web applications, responsive design
 - **Key Features**: SEO optimized, fast performance, scalable architecture
-- **Learn More**: https://ananthawebsolutions.com/services/web-development
+- **Learn More**: https://ananthadigital.com/services/web-development
 
 ### 2. Mobile Development
 - **Technologies**: React Native, Flutter, Swift, Kotlin
 - **Platforms**: iOS, Android, Cross-platform
 - **Key Features**: Native performance, offline capability, push notifications
-- **Learn More**: https://ananthawebsolutions.com/services/mobile-development
+- **Learn More**: https://ananthadigital.com/services/mobile-development
 
 ### 3. E-commerce Solutions
 - **Platforms**: Shopify, WooCommerce, Magento, Custom solutions
 - **Features**: Payment integration, inventory management, multi-currency
-- **Learn More**: https://ananthawebsolutions.com/services/ecommerce-solutions
+- **Learn More**: https://ananthadigital.com/services/ecommerce-solutions
 
 ### 4. UI/UX Design
 - **Tools**: Figma, Adobe XD, Sketch, InVision
 - **Process**: User research, wireframing, prototyping, testing
-- **Learn More**: https://ananthawebsolutions.com/services/ui-ux-design
+- **Learn More**: https://ananthadigital.com/services/ui-ux-design
 
 ### 5. Cloud & DevOps
 - **Cloud Providers**: AWS, Azure, Google Cloud
 - **Services**: Cloud migration, CI/CD pipelines, containerization, monitoring
 - **Technologies**: Docker, Kubernetes, Terraform, Jenkins
-- **Learn More**: https://ananthawebsolutions.com/services/cloud-devops
+- **Learn More**: https://ananthadigital.com/services/cloud-devops
 
 ### 6. Adobe Experience Manager (AEM)
 - **Expertise**: AEM implementation, customization, integration
 - **Technologies**: AEM 6.5, Java, OSGi, Apache Sling
-- **Learn More**: https://ananthawebsolutions.com/services/adobe-experience-manager
+- **Learn More**: https://ananthadigital.com/services/adobe-experience-manager
 
 ### 7. Support & Maintenance
 - **Availability**: 24/7 technical support
 - **Services**: Regular updates, security patches, performance monitoring
-- **Learn More**: https://ananthawebsolutions.com/services/support-maintenance
+- **Learn More**: https://ananthadigital.com/services/support-maintenance
 
 ## Global Presence
 
 ### India Office (Headquarters)
 - **Location**: HPR LUXURY HOUSES, Kakkalapalle Rural, Andhra Pradesh, India
 - **Phone**: +91-7013594249
-- **Email**: account@ananthawebsolutions.com
+- **Email**: account@ananthadigital.com
 - **Hours**: Monday-Saturday, 9:00 AM - 6:00 PM IST
 
 ### Canada Office
 - **Location**: 380 Southdale Road East, London, Ontario, Canada
-- **Email**: account@ananthawebsolutions.com
+- **Email**: account@ananthadigital.com
 - **Hours**: Monday-Saturday, 9:00 AM - 6:00 PM EST
 
 ### USA Office
 - **Location**: 6115 Abbotts Bridge Rd Apt 1716, Johns Creek, GA 30097-5760, USA
 - **Phone**: +1-470-225-0022
-- **Email**: account@ananthawebsolutions.com
+- **Email**: account@ananthadigital.com
 - **Hours**: Monday-Saturday, 9:00 AM - 6:00 PM EST
 
 ## Key Statistics
@@ -127,21 +127,21 @@ Anantha Web Solutions is a leading web and mobile development company providing 
 
 ## Contact Information
 
-- **Website**: https://ananthawebsolutions.com
-- **Email**: account@ananthawebsolutions.com
+- **Website**: https://ananthadigital.com
+- **Email**: account@ananthadigital.com
 - **Phone**: +91-7013594249
-- **Contact Page**: https://ananthawebsolutions.com/contact
+- **Contact Page**: https://ananthadigital.com/contact
 
 ## Quick Links
 
-- Services: https://ananthawebsolutions.com/services
-- About Us: https://ananthawebsolutions.com/about
-- Industries: https://ananthawebsolutions.com/industries
-- Contact: https://ananthawebsolutions.com/contact
+- Services: https://ananthadigital.com/services
+- About Us: https://ananthadigital.com/about
+- Industries: https://ananthadigital.com/industries
+- Contact: https://ananthadigital.com/contact
 
 ---
 
 *Last Updated: March 22, 2024*
 *Source: Anantha Web Solutions Official Website*
-*Citation: Anantha Web Solutions. (2024). Company Overview. Retrieved from https://ananthawebsolutions.com*
+*Citation: Anantha Web Solutions. (2024). Company Overview. Retrieved from https://ananthadigital.com*
 

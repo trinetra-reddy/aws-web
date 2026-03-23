@@ -11,13 +11,13 @@ export default function EcommerceSolutions() {
     'E-commerce Solutions',
     'Complete e-commerce platforms with payment integration, inventory management, and analytics. Custom online stores built with Shopify, WooCommerce, and Magento.',
     'Anantha Web Solutions',
-    'https://ananthawebsolutions.com/services/ecommerce-solutions'
+    'https://ananthadigital.com/services/ecommerce-solutions'
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://ananthawebsolutions.com' },
-    { name: 'Services', url: 'https://ananthawebsolutions.com/services' },
-    { name: 'E-commerce Solutions', url: 'https://ananthawebsolutions.com/services/ecommerce-solutions' }
+    { name: 'Home', url: 'https://ananthadigital.com' },
+    { name: 'Services', url: 'https://ananthadigital.com/services' },
+    { name: 'E-commerce Solutions', url: 'https://ananthadigital.com/services/ecommerce-solutions' }
   ])
   const features = [
     { icon: ShoppingCart, title: 'Custom Online Stores', description: 'Tailored e-commerce platforms built to match your brand and business needs' },

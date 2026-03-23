@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://ananthawebsolutions.com',
+  siteUrl: process.env.SITE_URL || 'https://ananthadigital.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/api/*', '/404'],
@@ -21,7 +21,7 @@ module.exports = {
       }
     ],
     additionalSitemaps: [
-      'https://ananthawebsolutions.com/sitemap.xml',
+      'https://ananthadigital.com/sitemap.xml',
     ],
   },
   changefreq: 'weekly',

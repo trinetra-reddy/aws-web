@@ -137,7 +137,7 @@ export function generateServiceSchema(
     "provider": {
       "@type": "Organization",
       "name": provider,
-      "url": "https://ananthawebsolutions.com"
+      "url": "https://ananthadigital.com"
     },
     ...(url && { "url": url }),
     "areaServed": {
@@ -146,7 +146,7 @@ export function generateServiceSchema(
     },
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": url || "https://ananthawebsolutions.com/contact",
+      "serviceUrl": url || "https://ananthadigital.com/contact",
       "servicePhone": "+91-7013594249",
       "email": "account@ananthawebsolutions.com"
     }

@@ -29,7 +29,7 @@ export default function Home() {
     },
     {
       question: "How can I contact Anantha Web Solutions?",
-      answer: "You can contact us at +91-7013594249, email account@ananthawebsolutions.com, or visit our contact page at https://ananthawebsolutions.com/contact"
+      answer: "You can contact us at +91-7013594249, email account@ananthadigital.com, or visit our contact page at https://ananthadigital.com/contact"
     }
   ]
 
@@ -43,8 +43,8 @@ export default function Home() {
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Anantha Web Solutions | Custom Web & Mobile Development" />
         <meta property="og:description" content="Transform your business with custom web and mobile solutions. Expert team delivering innovative digital solutions globally." />
-        <meta property="og:image" content="https://ananthawebsolutions.com/assets/logos/ananthaweb.png" />
-        <meta property="og:url" content="https://ananthawebsolutions.com/" />
+        <meta property="og:image" content="https://ananthadigital.com/assets/logos/ananthaweb.png" />
+        <meta property="og:url" content="https://ananthadigital.com/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
@@ -61,7 +61,7 @@ export default function Home() {
         />
         <meta name="twitter:title" content="Anantha Web Solutions | Custom Web & Mobile Development" />
         <meta name="twitter:description" content="Transform your business with custom web and mobile solutions." />
-        <meta name="twitter:image" content="https://ananthawebsolutions.com/assets/logos/ananthaweb.png" />
+        <meta name="twitter:image" content="https://ananthadigital.com/assets/logos/ananthaweb.png" />
       </Head>
 
       {/* GEO Component for AI Optimization */}
@@ -78,12 +78,12 @@ export default function Home() {
           "Adobe Experience Manager"
         ]}
         sources={[
-          "https://ananthawebsolutions.com",
-          "https://ananthawebsolutions.com/services",
-          "https://ananthawebsolutions.com/about"
+          "https://ananthadigital.com",
+          "https://ananthadigital.com/services",
+          "https://ananthadigital.com/about"
         ]}
         citations={[
-          "Anantha Web Solutions. (2024). Company Overview. Retrieved from https://ananthawebsolutions.com"
+          "Anantha Web Solutions. (2024). Company Overview. Retrieved from https://ananthadigital.com"
         ]}
       />
 

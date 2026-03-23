@@ -5,7 +5,13 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import Link from 'next/link'
 import { ArrowRight, Play } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
-import { Player } from '@lottiefiles/react-lottie-player'
+import dynamic from 'next/dynamic'
+
+// Dynamic import for Lottie Player to avoid SSR issues
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+)
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {

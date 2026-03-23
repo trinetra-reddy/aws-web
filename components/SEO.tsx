@@ -15,13 +15,13 @@ export default function SEO({
   title = 'Anantha Web Solutions | Custom Web & Mobile Development',
   description = 'Transform your business with custom web development, mobile apps, e-commerce solutions, and cloud services. Expert team delivering innovative digital solutions globally.',
   keywords = 'web development, mobile app development, e-commerce solutions, UI/UX design, cloud services, DevOps, Adobe Experience Manager, AEM, digital transformation',
-  ogImage = 'https://ananthawebsolutions.com/assets/logos/ananthaweb.png',
+  ogImage = 'https://ananthadigital.com/assets/logos/ananthaweb.png',
   ogType = 'website',
   canonical,
   noindex = false,
   structuredData
 }: SEOProps) {
-  const siteUrl = 'https://ananthawebsolutions.com'
+  const siteUrl = 'https://ananthadigital.com'
   const fullTitle = title.includes('Anantha') ? title : `${title} | Anantha Web Solutions`
   const canonicalUrl = canonical || siteUrl
 
@@ -89,8 +89,8 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "Anantha Web Solutions",
   "alternateName": "Anantha Web Solutions Pvt Ltd",
-  "url": "https://ananthawebsolutions.com",
-  "logo": "https://ananthawebsolutions.com/assets/logos/ananthaweb.png",
+  "url": "https://ananthadigital.com",
+  "logo": "https://ananthadigital.com/assets/logos/ananthaweb.png",
   "description": "Leading web and mobile development company providing custom digital solutions globally",
   "email": "account@ananthawebsolutions.com",
   "telephone": "+91-7013594249",
@@ -178,8 +178,8 @@ export const localBusinessSchema = (office: 'india' | 'canada' | 'usa') => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": officeData.name,
-    "image": "https://ananthawebsolutions.com/assets/logos/ananthaweb.png",
-    "url": "https://ananthawebsolutions.com",
+    "image": "https://ananthadigital.com/assets/logos/ananthaweb.png",
+    "url": "https://ananthadigital.com",
     "telephone": officeData.telephone,
     "address": {
       "@type": "PostalAddress",

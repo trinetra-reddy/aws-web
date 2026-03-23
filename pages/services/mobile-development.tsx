@@ -11,13 +11,13 @@ export default function MobileDevelopment() {
     'Mobile App Development',
     'Native and cross-platform mobile app development for iOS and Android using React Native and Flutter. High-performance apps with seamless functionality.',
     'Anantha Web Solutions',
-    'https://ananthawebsolutions.com/services/mobile-development'
+    'https://ananthadigital.com/services/mobile-development'
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://ananthawebsolutions.com' },
-    { name: 'Services', url: 'https://ananthawebsolutions.com/services' },
-    { name: 'Mobile Development', url: 'https://ananthawebsolutions.com/services/mobile-development' }
+    { name: 'Home', url: 'https://ananthadigital.com' },
+    { name: 'Services', url: 'https://ananthadigital.com/services' },
+    { name: 'Mobile Development', url: 'https://ananthadigital.com/services/mobile-development' }
   ])
   const features = [
     { icon: Smartphone, title: 'Cross-Platform Apps', description: 'Build once, deploy everywhere - iOS, Android, and web from a single codebase' },
@@ -67,7 +67,7 @@ export default function MobileDevelopment() {
         title="Mobile App Development Services"
         description="Professional mobile app development for iOS and Android. Cross-platform solutions with React Native and Flutter. Native performance with seamless functionality."
         keywords="mobile app development, iOS, Android, React Native, Flutter, cross-platform apps, native apps, mobile solutions"
-        canonical="https://ananthawebsolutions.com/services/mobile-development"
+        canonical="https://ananthadigital.com/services/mobile-development"
         structuredData={serviceSchema}
       />
 
@@ -75,7 +75,7 @@ export default function MobileDevelopment() {
         title="Mobile App Development - Anantha Web Solutions"
         description="Native and cross-platform mobile app development for iOS and Android using React Native and Flutter."
         expertise={['Mobile Development', 'React Native', 'Flutter', 'iOS', 'Android', 'Cross-platform Apps']}
-        sources={['https://ananthawebsolutions.com/services/mobile-development']}
+        sources={['https://ananthadigital.com/services/mobile-development']}
       />
 
       <Head>

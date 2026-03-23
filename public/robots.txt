@@ -13,7 +13,7 @@ User-agent: Bingbot
 Allow: /
 
 # Host
-Host: https://ananthawebsolutions.com
+Host: https://ananthadigital.com
 
 # Sitemaps
-Sitemap: https://ananthawebsolutions.com/sitemap.xml
+Sitemap: https://ananthadigital.com/sitemap.xml

@@ -57,8 +57,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'account@ananthawebsolutions.com',
-      link: 'mailto:account@ananthawebsolutions.com',
+      value: 'account@ananthadigital.com',
+      link: 'mailto:account@ananthadigital.com',
       color: 'purple'
     },
     {
@@ -81,9 +81,9 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Us - Anantha Web Solutions"
-        description="Get in touch with Anantha Web Solutions. Global offices in India, Canada, and USA. Contact us at +91-7013594249 or account@ananthawebsolutions.com"
+        description="Get in touch with Anantha Web Solutions. Global offices in India, Canada, and USA. Contact us at +91-7013594249 or account@ananthadigital.com"
         keywords="contact anantha web solutions, web development company contact, India office, Canada office, USA office"
-        canonical="https://ananthawebsolutions.com/contact"
+        canonical="https://ananthadigital.com/contact"
         structuredData={localBusinessSchema('india')}
       />
 
@@ -91,7 +91,7 @@ export default function Contact() {
         title="Contact Anantha Web Solutions"
         description="Contact us for web development, mobile apps, and digital solutions. Offices in India, Canada, and USA. Phone: +91-7013594249"
         expertise={['Web Development', 'Mobile Development', 'E-commerce', 'Cloud Services']}
-        sources={['https://ananthawebsolutions.com/contact']}
+        sources={['https://ananthadigital.com/contact']}
       />
 
       <Head>

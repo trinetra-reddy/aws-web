@@ -38,14 +38,14 @@ export default function Services() {
         title="Our Services - Web & Mobile Development"
         description="Comprehensive digital services including web development, mobile apps, e-commerce solutions, UI/UX design, cloud & DevOps, Adobe Experience Manager, and 24/7 support."
         keywords="web development services, mobile app development, e-commerce solutions, UI/UX design, cloud services, DevOps, AEM, support and maintenance"
-        canonical="https://ananthawebsolutions.com/services"
+        canonical="https://ananthadigital.com/services"
       />
 
       <GEO
         title="Services - Anantha Web Solutions"
         description="We offer 7 comprehensive services: Web Development, Mobile Development, E-commerce Solutions, UI/UX Design, Cloud & DevOps, Adobe Experience Manager, and Support & Maintenance."
         expertise={['Web Development', 'Mobile Development', 'E-commerce', 'UI/UX Design', 'Cloud Services', 'DevOps', 'AEM']}
-        sources={['https://ananthawebsolutions.com/services']}
+        sources={['https://ananthadigital.com/services']}
       />
 
       <main className="w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-900">
