@@ -12,16 +12,16 @@ export default function ThemeSwitcher() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1, duration: 0.5, type: 'spring' }}
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 group"
+      className="fixed bottom-24 right-6 lg:top-6 lg:bottom-auto z-40 group"
       aria-label="Toggle theme"
     >
-      <div className={`relative w-16 h-16 rounded-full shadow-xl transition-all duration-500 ${
-        theme === 'sunset' 
-          ? 'bg-gradient-to-br from-coral-red to-sunset-orange hover:shadow-glow-coral' 
+      <div className={`relative w-14 h-14 lg:w-16 lg:h-16 rounded-full shadow-xl transition-all duration-500 ${
+        theme === 'sunset'
+          ? 'bg-gradient-to-br from-coral-red to-sunset-orange hover:shadow-glow-coral'
           : 'bg-gradient-to-br from-forest-green to-emerald hover:shadow-glow-green'
       }`}>
         <div className="absolute inset-0 flex items-center justify-center">
-          <Palette className="w-7 h-7 text-white group-hover:rotate-180 transition-transform duration-500" />
+          <Palette className="w-6 h-6 lg:w-7 lg:h-7 text-white group-hover:rotate-180 transition-transform duration-500" />
         </div>
         
         {/* Theme indicator */}
