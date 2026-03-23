@@ -4,7 +4,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
-import Image from 'next/image'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -138,26 +137,16 @@ export default function TestimonialsModern() {
                     </p>
 
                     {/* Author */}
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
+                    <div className="border-t-2 border-white/50 pt-6">
+                      <div className={`text-xl font-bold ${
+                        theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
+                      }`}>
+                        {testimonial.name}
                       </div>
-                      <div>
-                        <div className={`text-xl font-bold ${
-                          theme === 'sunset' ? 'text-deep-charcoal' : 'text-deep-navy'
-                        }`}>
-                          {testimonial.name}
-                        </div>
-                        <div className={`text-sm ${
-                          theme === 'sunset' ? 'text-gray-600' : 'text-gray-700'
-                        }`}>
-                          {testimonial.role}
-                        </div>
+                      <div className={`text-sm ${
+                        theme === 'sunset' ? 'text-gray-600' : 'text-gray-700'
+                      }`}>
+                        {testimonial.role}, {testimonial.company}
                       </div>
                     </div>
                   </div>

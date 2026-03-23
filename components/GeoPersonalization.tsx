@@ -49,9 +49,11 @@ export default function GeoPersonalization() {
           <h3 className="text-lg font-bold text-slate-900 mb-2">
             Your Nearest Office: {geoData.nearestOffice.name}
           </h3>
-          <p className="text-sm text-slate-600 mb-3">
-            We detected you're browsing from <strong>{geoData.city ? `${geoData.city}, ` : ''}{geoData.country}</strong>
-          </p>
+          {geoData.country && geoData.country !== 'Unknown' && (
+            <p className="text-sm text-slate-600 mb-3">
+              We detected you're browsing from <strong>{geoData.city && geoData.city !== 'Unknown' ? `${geoData.city}, ` : ''}{geoData.country}</strong>
+            </p>
+          )}
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-sm text-slate-700">
               <MapPin className="w-4 h-4 text-blue-600" />

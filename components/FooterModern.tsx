@@ -233,6 +233,11 @@ const { theme } = useTheme()
                         Johns Creek, GA 30097-5760,<br />
                         USA
                       </p>
+                      <p className={`text-sm mt-2 font-semibold ${
+                        theme === 'sunset' ? 'text-coral-red' : 'text-forest-green'
+                      }`}>
+                        <a href="tel:+14702250022" className="hover:underline">+1 (470) 225-0022</a>
+                      </p>
                     </div>
                   </div>
                 </div>
