@@ -10,7 +10,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { industriesData } from '../data/IndustriesData';
 import { ArrowRight, Sparkles, CheckCircle2, Building2 } from 'lucide-react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import dynamic from 'next/dynamic';
+
+// Dynamic import for Lottie Player to avoid SSR issues
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+);
 
 export default function Industries() {
   useEffect(() => {

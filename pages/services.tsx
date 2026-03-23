@@ -8,9 +8,15 @@ import { servicesData } from '../data/ServicesData';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import dynamic from 'next/dynamic';
 import SEO from '../components/SEO';
 import GEO from '../components/GEO';
+
+// Dynamic import for Lottie Player to avoid SSR issues
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+);
 
 export default function Services() {
   useEffect(() => {

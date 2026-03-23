@@ -3,10 +3,16 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { User, Target, Users, Zap, Award, Globe, TrendingUp } from 'lucide-react'
-import { Player } from '@lottiefiles/react-lottie-player'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import SEO, { organizationSchema } from '../components/SEO'
 import GEO from '../components/GEO'
+
+// Dynamic import for Lottie Player to avoid SSR issues
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+)
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 40 },
