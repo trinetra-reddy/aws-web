@@ -7,10 +7,13 @@ import { ArrowRight, Play } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import dynamic from 'next/dynamic'
 
-// Dynamic import for Lottie Player to avoid SSR issues
+// Dynamic import for Lottie Player to avoid SSR issues with lazy loading
 const Player = dynamic(
   () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
-  { ssr: false }
+  {
+    ssr: false,
+    loading: () => <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl animate-pulse" />
+  }
 )
 
 // Register GSAP plugins

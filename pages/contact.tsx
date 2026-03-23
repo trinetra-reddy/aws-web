@@ -50,7 +50,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 7013594249',
+      value: '+919963789858',
       link: 'tel:+917013594249',
       color: 'blue'
     },

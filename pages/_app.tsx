@@ -30,7 +30,18 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
         <link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
-        <link rel="canonical" href="https://ananthawebsolutions.com/" />
+        <link rel="canonical" href="https://ananthadigital.com/" />
+
+        {/* DNS Prefetch & Preconnect for Performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Preload Critical Resources */}
+        <link rel="preload" href="/assets/logos/ananthaweb.png" as="image" />
       </Head>
 
       {/* Global Layout and Page */}

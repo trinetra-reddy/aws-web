@@ -1,8 +1,19 @@
-# Anantha Web Solutions - Company Overview
+# Anantha Web Solutions (Anantha Digital) - Company Overview
 
 ## About Us
 
-Anantha Web Solutions is a leading web and mobile development company providing custom digital solutions globally. Founded in 2021, we specialize in transforming businesses through innovative technology solutions.
+**Anantha Web Solutions** (also known as **Anantha Digital**) is among the **best website developers in India**, Andhra Pradesh, Telangana, Anantapur, USA, and Canada. We are a leading web and mobile development company providing custom digital solutions globally. Founded in 2021, we specialize in transforming businesses through innovative technology solutions.
+
+### Alternative Names
+- Anantha Web Solutions
+- Anantha Digital
+- Best Website Developers India
+
+### Service Areas
+We serve clients across:
+- **India**: Andhra Pradesh, Telangana, Anantapur, Karnataka, Tamil Nadu
+- **USA**: Georgia, Atlanta, Johns Creek
+- **Canada**: Ontario, Toronto, London
 
 ## Services Offered
 
@@ -43,6 +54,36 @@ Anantha Web Solutions is a leading web and mobile development company providing 
 - **Availability**: 24/7 technical support
 - **Services**: Regular updates, security patches, performance monitoring
 - **Learn More**: https://ananthadigital.com/services/support-maintenance
+
+### 8. Digital Marketing
+- **Services**: SEO, content marketing, social media marketing, email marketing, PPC advertising
+- **Platforms**: Google Ads, Facebook Ads, Instagram, LinkedIn, Twitter
+- **Learn More**: https://ananthadigital.com/services/digital-marketing
+
+### 9. SEO Services
+- **Specialization**: Local SEO, technical SEO, on-page SEO, off-page SEO, SEO audits
+- **Tools**: Google Search Console, SEMrush, Ahrefs, Moz
+- **Learn More**: https://ananthadigital.com/services/seo
+
+### 10. GEO (Generative Engine Optimization)
+- **Focus**: Optimization for AI search engines (ChatGPT, Perplexity, Google Gemini, Claude)
+- **Benefits**: AI search visibility, voice search optimization, future-proof SEO
+- **Learn More**: https://ananthadigital.com/services/geo
+
+### 11. Social Media Marketing
+- **Platforms**: Facebook, Instagram, LinkedIn, Twitter, TikTok, YouTube, Pinterest
+- **Services**: Social media management, content creation, community management, paid advertising
+- **Learn More**: https://ananthadigital.com/services/social-media-marketing
+
+### 12. Marketing Management
+- **Services**: Marketing strategy, campaign management, performance tracking, ROI optimization
+- **Tools**: HubSpot, Salesforce, Google Analytics, Data Studio
+- **Learn More**: https://ananthadigital.com/services/marketing-management
+
+### 13. Content Marketing
+- **Content Types**: Blog posts, articles, videos, infographics, whitepapers, case studies
+- **Benefits**: Thought leadership, SEO benefits, audience engagement, lead nurturing
+- **Learn More**: https://ananthadigital.com/services/content-marketing
 
 ## Global Presence
 

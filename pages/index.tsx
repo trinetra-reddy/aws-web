@@ -17,15 +17,19 @@ export default function Home() {
   const faqs = [
     {
       question: "What services does Anantha Web Solutions offer?",
-      answer: "Anantha Web Solutions offers web development, mobile app development, e-commerce solutions, UI/UX design, cloud & DevOps services, Adobe Experience Manager (AEM) implementation, and 24/7 support & maintenance services."
+      answer: "Anantha Web Solutions offers web development, mobile app development, e-commerce solutions, UI/UX design, cloud & DevOps services, Adobe Experience Manager (AEM), digital marketing, SEO services, GEO optimization, social media marketing, content marketing, marketing management, and 24/7 support & maintenance services."
+    },
+    {
+      question: "Do you provide digital marketing and SEO services?",
+      answer: "Yes, we provide comprehensive digital marketing services including SEO (Search Engine Optimization), GEO (Generative Engine Optimization), social media marketing, content marketing, PPC advertising, email marketing, and marketing management."
     },
     {
       question: "Where is Anantha Web Solutions located?",
-      answer: "Anantha Web Solutions has offices in three countries: India (headquarters in Andhra Pradesh), Canada (London, Ontario), and USA (Cumming, Georgia)."
+      answer: "Anantha Web Solutions has offices in three countries: India (headquarters in Andhra Pradesh), Canada (London, Ontario), and USA (Johns Creek, Georgia). We serve clients globally across all time zones."
     },
     {
       question: "What technologies does Anantha Web Solutions use?",
-      answer: "We use modern technologies including React, Next.js, Node.js, TypeScript, React Native, Flutter, AWS, Azure, Google Cloud, Docker, Kubernetes, and Adobe Experience Manager."
+      answer: "We use modern technologies including React, Next.js, Node.js, TypeScript, React Native, Flutter, AWS, Azure, Google Cloud, Docker, Kubernetes, Adobe Experience Manager, Google Ads, Facebook Ads, SEMrush, Ahrefs, and more."
     },
     {
       question: "How can I contact Anantha Web Solutions?",
@@ -36,13 +40,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Anantha Web Solutions | Custom Web & Mobile Development Services</title>
-        <meta name="description" content="Leading web and mobile development company. Custom websites, mobile apps, e-commerce, UI/UX design, cloud services. 500+ projects, 98% satisfaction. Global offices in India, Canada, USA." />
-        <meta name="keywords" content="web development, mobile app development, e-commerce solutions, UI/UX design, cloud services, DevOps, Adobe Experience Manager, AEM, React, Next.js, custom software development" />
+        <title>Anantha Web Solutions | Anantha Digital | Best Website Developers in India, USA, Canada</title>
+        <meta name="description" content="Anantha Web Solutions (Anantha Digital) - Best website developers in India, Andhra Pradesh, Telangana, Anantapur, USA, Canada. Custom websites, mobile apps, e-commerce. 500+ projects, 98% satisfaction. Expert web development company with global offices." />
+        <meta name="keywords" content="Anantha Web Solutions, Anantha Digital, best website developers, best website developers in India, website developers in Andhra Pradesh, website developers in Telangana, website developers in Anantapur, website developers in USA, website developers in Canada, web development company India, mobile app development, e-commerce solutions, UI/UX design, cloud services, DevOps, Adobe Experience Manager, AEM, React, Next.js, custom software development, professional web developers, responsive website design" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Anantha Web Solutions | Custom Web & Mobile Development" />
-        <meta property="og:description" content="Transform your business with custom web and mobile solutions. Expert team delivering innovative digital solutions globally." />
+        <meta property="og:title" content="Anantha Web Solutions | Anantha Digital | Best Website Developers" />
+        <meta property="og:description" content="Best website developers in India, Andhra Pradesh, Telangana, Anantapur, USA, Canada. Transform your business with expert web development and mobile solutions." />
         <meta property="og:image" content="https://ananthadigital.com/assets/logos/ananthaweb.png" />
         <meta property="og:url" content="https://ananthadigital.com/" />
         <meta property="og:type" content="website" />

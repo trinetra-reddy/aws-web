@@ -147,7 +147,7 @@ const { theme } = useTheme()
                         <a href="tel:+917013594249" className={`transition-colors duration-200 ${
                           theme === 'sunset' ? 'hover:text-deep-charcoal' : 'hover:text-deep-navy'
                         }`}>
-                          +91 7013594249
+                          +919963789858
                         </a>
                       </li>
                       <li className="flex items-start gap-3">

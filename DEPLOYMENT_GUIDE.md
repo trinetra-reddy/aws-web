@@ -71,7 +71,7 @@ netlify deploy --prod
 
 ```
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-SITE_URL=https://ananthawebsolutions.com
+SITE_URL=https://ananthadigital.com/
 ```
 
 **To get Google Analytics ID**:
@@ -164,9 +164,9 @@ SITE_URL=https://ananthawebsolutions.com
 
 ### **Google Search Console**
 1. Go to: https://search.google.com/search-console
-2. Add property: `https://ananthawebsolutions.com`
+2. Add property: `https://ananthadigital.com/`
 3. Verify ownership (DNS or HTML file)
-4. Submit sitemap: `https://ananthawebsolutions.com/sitemap.xml`
+4. Submit sitemap: `https://ananthadigital.com//sitemap.xml`
 
 ### **Bing Webmaster Tools**
 1. Go to: https://www.bing.com/webmasters

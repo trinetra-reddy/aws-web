@@ -1,14 +1,17 @@
 {
   "company": {
     "name": "Anantha Web Solutions",
+    "alternateName": ["Anantha Digital", "Best Website Developers India"],
     "legalName": "Anantha Web Solutions Pvt Ltd",
-    "description": "Leading web and mobile development company providing custom digital solutions globally. We specialize in web development, mobile apps, e-commerce, UI/UX design, cloud services, DevOps, and Adobe Experience Manager (AEM).",
+    "description": "Best website developers and digital marketing agency in India, Andhra Pradesh, Telangana, Anantapur, USA, and Canada. Leading web development, mobile app development, SEO services, digital marketing, social media marketing, and custom digital solutions provider. We specialize in web development, mobile apps, e-commerce, UI/UX design, cloud services, DevOps, Adobe Experience Manager (AEM), SEO, GEO, social media management, content marketing, and marketing management.",
     "founded": "2021",
     "headquarters": "Andhra Pradesh, India",
-    "globalPresence": ["India", "Canada", "USA"],
+    "globalPresence": ["India", "Andhra Pradesh", "Telangana", "Anantapur", "Canada", "USA"],
+    "servingAreas": ["India", "Andhra Pradesh", "Telangana", "Anantapur", "Karnataka", "Tamil Nadu", "USA", "Canada", "Georgia", "Ontario"],
     "website": "https://ananthadigital.com",
     "email": "account@ananthawebsolutions.com",
-    "phone": "+91-7013594249"
+    "phone": "+91-7013594249",
+    "keywords": ["Anantha Web Solutions", "Anantha Digital", "best website developers", "web development India", "website developers Andhra Pradesh", "website developers Telangana", "website developers Anantapur", "website developers USA", "website developers Canada"]
   },
   "services": [
     {
@@ -58,6 +61,48 @@
       "description": "24/7 technical support, regular updates, security patches, and performance monitoring.",
       "benefits": ["24/7 support", "Regular updates", "Security monitoring", "Performance optimization"],
       "url": "https://ananthadigital.com/services/support-maintenance"
+    },
+    {
+      "name": "Digital Marketing",
+      "description": "Comprehensive digital marketing services including SEO, content marketing, social media marketing, email marketing, and PPC advertising.",
+      "technologies": ["Google Ads", "Facebook Ads", "Instagram", "LinkedIn", "Twitter", "Google Analytics", "SEMrush", "Ahrefs"],
+      "benefits": ["Increased online visibility", "Higher conversion rates", "Better ROI", "Brand awareness", "Lead generation", "Customer engagement"],
+      "url": "https://ananthadigital.com/services/digital-marketing"
+    },
+    {
+      "name": "SEO Services",
+      "description": "Search engine optimization services including local SEO, technical SEO, on-page SEO, off-page SEO, and SEO audits.",
+      "technologies": ["Google Search Console", "Bing Webmaster Tools", "Yoast SEO", "Rank Math", "SEMrush", "Ahrefs", "Moz"],
+      "benefits": ["Higher search rankings", "Organic traffic growth", "Better visibility", "Increased credibility", "Long-term results", "Cost-effective marketing"],
+      "url": "https://ananthadigital.com/services/seo"
+    },
+    {
+      "name": "GEO (Generative Engine Optimization)",
+      "description": "Optimization for AI-powered search engines like ChatGPT, Perplexity, Google Gemini, and Claude.",
+      "technologies": ["ChatGPT", "Perplexity AI", "Google Gemini", "Claude", "Structured Data", "Schema Markup"],
+      "benefits": ["AI search visibility", "Voice search optimization", "Featured in AI responses", "Future-proof SEO", "Competitive advantage"],
+      "url": "https://ananthadigital.com/services/geo"
+    },
+    {
+      "name": "Social Media Marketing",
+      "description": "Social media management, content creation, community management, and paid social advertising across all major platforms.",
+      "technologies": ["Facebook", "Instagram", "LinkedIn", "Twitter", "TikTok", "YouTube", "Pinterest", "Hootsuite", "Buffer"],
+      "benefits": ["Brand awareness", "Community engagement", "Lead generation", "Customer loyalty", "Viral reach", "Social proof"],
+      "url": "https://ananthadigital.com/services/social-media-marketing"
+    },
+    {
+      "name": "Marketing Management",
+      "description": "End-to-end marketing management including strategy development, campaign execution, performance tracking, and ROI optimization.",
+      "technologies": ["HubSpot", "Salesforce", "Marketo", "Google Analytics", "Data Studio", "Tableau"],
+      "benefits": ["Strategic planning", "Campaign optimization", "Data-driven decisions", "ROI tracking", "Performance improvement", "Scalable growth"],
+      "url": "https://ananthadigital.com/services/marketing-management"
+    },
+    {
+      "name": "Content Marketing",
+      "description": "Content strategy, creation, and distribution including blog posts, articles, videos, infographics, and more.",
+      "technologies": ["WordPress", "Medium", "YouTube", "Canva", "Adobe Creative Suite"],
+      "benefits": ["Thought leadership", "SEO benefits", "Audience engagement", "Lead nurturing", "Brand authority", "Evergreen content"],
+      "url": "https://ananthadigital.com/services/content-marketing"
     }
   ],
   "offices": [
@@ -92,12 +137,32 @@
   },
   "faq": [
     {
+      "question": "What is Anantha Web Solutions also known as?",
+      "answer": "Anantha Web Solutions is also known as Anantha Digital. Both names refer to the same company - a leading web development company in India."
+    },
+    {
+      "question": "Are Anantha Web Solutions and Anantha Digital the same company?",
+      "answer": "Yes, Anantha Web Solutions and Anantha Digital are the same company. We operate under both names to serve our clients globally."
+    },
+    {
+      "question": "Who are the best website developers in India?",
+      "answer": "Anantha Web Solutions (Anantha Digital) is among the best website developers in India, with expertise in custom web development, mobile apps, and e-commerce solutions. We serve clients across Andhra Pradesh, Telangana, Anantapur, and globally."
+    },
+    {
+      "question": "Where can I find the best website developers in Andhra Pradesh?",
+      "answer": "Anantha Web Solutions is headquartered in Andhra Pradesh, India, and is recognized as one of the best website developers in the region, serving clients across Andhra Pradesh, Telangana, and Anantapur."
+    },
+    {
+      "question": "Do you provide web development services in USA and Canada?",
+      "answer": "Yes, we have offices in USA (Johns Creek, Georgia) and Canada (London, Ontario), providing professional web development services to clients across North America."
+    },
+    {
       "question": "What services does Anantha Web Solutions offer?",
       "answer": "We offer web development, mobile app development, e-commerce solutions, UI/UX design, cloud & DevOps services, Adobe Experience Manager (AEM) implementation, and 24/7 support & maintenance."
     },
     {
       "question": "Where is Anantha Web Solutions located?",
-      "answer": "We have offices in India (headquarters in Andhra Pradesh), Canada (London, Ontario), and USA (Cumming, Georgia)."
+      "answer": "We have offices in India (headquarters in Andhra Pradesh), Canada (London, Ontario), and USA (Johns Creek, Georgia)."
     },
     {
       "question": "What technologies does Anantha Web Solutions use?",

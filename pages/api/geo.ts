@@ -80,7 +80,7 @@ const offices = {
     name: 'India Office (Headquarters)',
     country: 'India',
     address: 'HPR LUXURY HOUSES, Kakkalapalle Rural, Andhra Pradesh, India',
-    phone: '+91 7013594249',
+    phone: '+919963789858',
     email: 'account@ananthawebsolutions.com'
   },
   canada: {
