@@ -23,6 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="robots" content="index, follow" />
 
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="LpZpuBwVkH1bHfCemeao3pK_amyJEzWQ81f0tQmB7zc" />
+
         {/* Favicons */}
         <link rel="icon" href="/assets/favicons/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
